@@ -1,0 +1,73 @@
+{
+  "paymentIdentification": {
+    "endToEndId": "PAYM0001",
+    "transactionId": "2018120717540001"
+  },
+  "instructedAmount": {
+    "currency": "BHD",
+    "value": "850.5"
+  },
+  "debtor": {
+    "name": "John Doe",
+    "address": "1 Park Street, NewYork",
+    "isPrivate": "true",
+    "casRecordId": "CwYMBA4IBw",
+    "alias": {
+      "name": "MOBILE",
+      "value": "+994515000000"
+    },
+    "account": {
+      "IBAN": "JO42ABCJ0000000000233085564510"
+    }
+  },
+  "creditor": {
+    "name": "John Doe",
+    "address": "1 Park Street, NewYork",
+    "isPrivate": "true",
+    "alias": {
+      "name": "MOBILE",
+      "value": "+994515000000"
+    },
+    "account": {
+      "IBAN": "JO42ABCJ0000000000233085564510"
+    }
+  },
+  "debtorAgent": {
+    "bic": "ABCJJOA0"
+  },
+  "creditorAgent": {
+    "bic": "ABCJJOA0"
+  },
+  "transactionTypeCode": "11110",
+  "purpose": "5814",
+  "regulatoryReporting": "GOODS PURCHASE",
+  "remittanceInformation": "remi info",
+  "instructionForNextAgent": "sender to receiver information",
+  "merchantQRDetails": {
+    "GUID": "JOQR",
+    "verificationCode": "a18827fccd22bf97856758902a32401bdc63ac88c191ff75ed8f2592623bee33",
+    "merchantData": {
+      "merchantCategoryCode": "MCC",
+      "merchantId": "Merchant ID",
+      "merchantName": "Jack Smith",
+      "merchantCity": "New York",
+      "merchantLocation": "location",
+      "countryCode": "JO",
+      "storeLabel": "ABC DEF",
+      "terminalLabel": "092018092"
+    },
+    "paymentData": {
+      "billNumber": "B0001",
+      "referenceLabel": "REFID",
+      "convenienceIndicator": "01",
+      "convenienceFeeFixedAmount": "string",
+      "convenienceFeePercentage": "string",
+      "dateTime": "2018-12-10T12:04:02Z"
+    },
+    "customerData": {
+      "mobileNumber": "51234567",
+      "loyaltyNumber": "Loyalty Number",
+      "customerLabel": "CONSUMERID"
+    }
+  }
+}
