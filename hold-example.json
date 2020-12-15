@@ -1,0 +1,60 @@
+{
+  "transactionId": "PQowo1231231",
+  "valueDate": "2020-01-25",
+  "timestamp": "2018-12-10T12:04:02Z",
+  "paymentEntry": {
+    "amount": {
+      "currency": "BHD",
+      "value": "850.5"
+    },
+    "debitAccount": "JO42ABCJ0000000000233085564510",
+    "creditAccount": "JO34ABCJ0000000000200014215001"
+  },
+  "paymentDetails": {
+    "paymentIdentification": {
+      "endToEndId": "PAYM0001",
+      "transactionId": "2018120717540001"
+    },
+    "transactionTypeCode": "11110",
+    "operationType": "CSCT",
+    "valueDate": "2020-01-25",
+    "instructedAmount": {
+      "currency": "BHD",
+      "value": "850.5"
+    },
+    "debtor": {
+      "name": "John Doe",
+      "address": "1 Park Street, NewYork",
+      "isPrivate": "true",
+      "casRecordId": "CwYMBA4IBw",
+      "alias": {
+        "name": "MOBILE",
+        "value": "+994515000000"
+      },
+      "account": {
+        "IBAN": "JO42ABCJ0000000000233085564510"
+      }
+    },
+    "creditor": {
+      "name": "John Doe",
+      "address": "1 Park Street, NewYork",
+      "isPrivate": "true",
+      "alias": {
+        "name": "MOBILE",
+        "value": "+994515000000"
+      },
+      "account": {
+        "IBAN": "JO42ABCJ0000000000233085564510"
+      }
+    },
+    "debtorAgent": {
+      "bic": "ABCJJOA0"
+    },
+    "creditorAgent": {
+      "bic": "ABCJJOA0"
+    },
+    "regulatoryReporting": "GOODS PURCHASE",
+    "remittanceInformation": "remi info",
+    "instructionForNextAgent": "sender to receiver information"
+  }
+}
