@@ -1,0 +1,46 @@
+{
+  "uid": {
+    "type": "TPASS",
+    "value": "N939003"
+  },
+  "documentValidityDate": "YYYY-MM-DD",
+  "resident": "true",
+  "name": "John",
+  "surname": "Doe",
+  "nickName": "eddie",
+  "gender": "MALE",
+  "birthDate": "YYYY-MM-DD",
+  "placeOfBirth": "country, city",
+  "address": {
+    "country": "IN",
+    "city": "CityName",
+    "stateProvinceRegion": "Region Name",
+    "address": "street, building No."
+  },
+  "additionalDetailsPrivate": {
+    "nationality": "BH",
+    "opendate": "2020-01-25",
+    "taxno": "value1",
+    "estdate": "2020-01-25",
+    "sid": {
+      "type": "TPASS",
+      "value": "N939003"
+    }
+  },
+  "additionalDetails": {
+    "customerType": "Individual",
+    "engName": {
+      "enSName": "SecondName",
+      "enTName": "ThirdName"
+    },
+    "arName": {
+      "arFName": "FirstName",
+      "arSName": "SecondName",
+      "arTName": "ThirdName",
+      "arLName": "LastName",
+      "arFullName": "Full Name",
+      "arTradeName": "Arabic Trade Name"
+    },
+    "engTradeName": "Individual"
+  }
+}
