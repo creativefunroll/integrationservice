@@ -1,0 +1,47 @@
+Basic YW5uMTE3OjE=
+
+{
+    "uid": 
+        {
+            "type": "SJW",
+            "value": "12128505"
+        },
+    "documentValidityDate": "2030-07-25",
+    "resident": false,
+    "name": "name Son of Jordanian Women",
+    "surname": "Surname",
+    "nickName": "nickname 12345689",
+    "gender": "MALE",
+    "birthDate": "1959-07-25",
+    "placeOfBirth": "place of birth CityName, CountryName",
+    "address": 
+        {
+            "country": "JO",
+            "city": "adr - CityName",
+            "stateProvinceRegion": "adr - state Provise rgn City CityName",
+            "address": "adr -adr CityName, StreetName"
+        },
+"additionalDetailsPrivate": 
+        {
+            "nationality": "addDet - nation ISO Alpha-2",
+            "opendate": "2020-06-11"
+        },
+
+"additionalDetails": 
+        {
+    "customerType": "Individual",
+            "engName": 
+            {
+            "enSName":"eng Second Name",
+            "enTName":"eng Third Name"
+            },
+            "arName": 
+            {
+            "arFName": "Arabic First Name الاسم الأول العربي",
+            "arSName": "Arabic Second Name الاسم الأول العربي",
+            "arTName": "Arabic Third Name",
+            "arLName": "Arabic Last Name"
+            }
+        }
+
+}

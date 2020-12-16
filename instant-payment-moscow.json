@@ -1,0 +1,61 @@
+{
+    "paymentIdentification": {"endToEndId": "ABCtoBOJ0712001"},
+    "transactionTypeCode": "21120",
+    "instructedAmount": {
+        "currency": "JOD",
+        "value": "500.00"
+    },
+   
+    "debtor": {
+        "account": {"IBAN": "JO75ABCJ0399000111555000111555"},
+        "CASrecordId": "CAS44377333",
+        "isPrivate": true,
+        "name": "Ann Black",
+        "address": "debtor address",
+        "alias": {
+              "type": "MOBILE",
+              "value": "+99451501555" }
+    },
+    "debtorAgent": {"bic": "ABCJJOA0"},
+    "creditor": {
+        "account": {"IBAN": "JO81BJOR0398111222333444555666"},
+        "isPrivate": false,
+        "name": "Flowers and Gifts Co",
+        "address": "address2",
+        "alias": {
+              "type": "MOBILE",
+              "value": "+555515000088" }
+    },
+    "creditorAgent": {"bic": "BJORJOA0"},
+    "purpose": "transaction purpose",
+    "regulatoryReporting": "requlatory reporting",
+    "remittanceInformation": "remi info from Bryansk",
+    "instructionForNextAgent": "instruction For Next Agent",
+    "merchantQRDetails": {
+        "GUID": "JOQR",
+        "verificationCode": "a18827fccd22bf97856758902a32401bdc63ac88c191ff75ed8f2592623bee33OTP",
+        "merchantData": {
+            "merchantCategoryCode": "1023",
+            "merchantId": "MerchantID123",
+            "merchantName": "MerchantName",
+            "merchantCity": "City",
+            "merchantLocation": "Location",
+            "countryCode": "JO",
+            "storeLabel": "StoreLabel",
+            "terminalLabel": "Terminal"
+            },
+        "paymentData": {
+            "billNumber": "BillNo",
+            "referenceLabel": "REFLabel",
+            "convenienceIndicator": "01",
+            "convenienceFeeFixedAmount": "10",
+            "convenienceFeePercentage": "37",
+            "dateTime": "2020-05-10 13:23:44"
+            },
+        "customerData": {
+        "mobileNumber": "MobileNumber",
+        "loyaltyNumber": "LoyaltyNumber",
+        "customerLabel": "CONSUMERID"
+        }  
+    }
+}
