@@ -1,0 +1,2659 @@
+{
+    "info": {
+        "_postman_id": "e4660720-214d-4bbe-84f3-4c9fc41ef566",
+        "name": "JO ABC",
+        "description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "1.Customer registration",
+            "item": [
+                {
+                    "name": "NEW INDIVIDUAL CUSTOMER",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"uid\": \r\n        {\r\n            \"type\": \"SJW\",\r\n            \"value\": \"12128505\"\r\n        },\r\n    \"documentValidityDate\": \"2030-07-25\",\r\n    \"resident\": false,\r\n    \"name\": \"name Son of Jordanian Women\",\r\n    \"surname\": \"Surname\",\r\n    \"nickName\": \"nickname 12345689\",\r\n    \"gender\": \"MALE\",\r\n    \"birthDate\": \"1959-07-25\",\r\n    \"placeOfBirth\": \"place of birth CityName, CountryName\",\r\n    \"address\": \r\n        {\r\n            \"country\": \"JO\",\r\n            \"city\": \"adr - CityName\",\r\n            \"stateProvinceRegion\": \"adr - state Provise rgn City CityName\",\r\n            \"address\": \"adr -adr CityName, StreetName\"\r\n        },\r\n\"additionalDetailsPrivate\": \r\n        {\r\n            \"nationality\": \"addDet - nation ISO Alpha-2\",\r\n            \"opendate\": \"2020-06-11\"\r\n        },\r\n\r\n\"additionalDetails\": \r\n        {\r\n    \"customerType\": \"Individual\",\r\n            \"engName\": \r\n            {\r\n            \"enSName\":\"eng Second Name\",\r\n            \"enTName\":\"eng Third Name\"\r\n            },\r\n            \"arName\": \r\n            {\r\n            \"arFName\": \"Arabic First Name الاسم الأول العربي\",\r\n            \"arSName\": \"Arabic Second Name الاسم الأول العربي\",\r\n            \"arTName\": \"Arabic Third Name\",\r\n            \"arLName\": \"Arabic Last Name\"\r\n            }\r\n        }\r\n\r\n}"
+                        },
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/customers",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "customers"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "NEW LEGAL CUSTOMER invalid body",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "type": "text",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"uid\": \r\n        {\r\n            \"type\": \"TAXNO\",\r\n            \"value\": \"101010\"\r\n        },\r\n    \"name\": \"ABC FullCompanyName\",\r\n    \"address\": \r\n        {\r\n            \"country\": \"JO\",\r\n            \"city\": \"CityName\",\r\n            \"stateProvinceRegion\": \"City CityName\",\r\n            \"address\": \"CityName, StreetName\"\r\n        },\r\n      \"additionalDetailsPrivate\": \r\n        {\r\n            \"taxNo\": \"value1\",\r\n            \"nationality\": \" ISO Alpha-2\",\r\n            \"estdate\": \"2020-12-05\",\r\n            \"sid\": \r\n        {\r\n            \"type\": \"commReg\",\r\n            \"value\": \"1234567890\"\r\n       }\r\n        },\r\n   \"additionalDetails\": \r\n        {\r\n            \"customerType\": \"Diplomat\",\r\n            \"engTradeName\": \"English Tarde Name\",\r\n            \"arName\": \r\n                    {\r\n                 \"estdate\": \"2020-12-08\",\r\n                \"arFullName\": \"Arabic Full Name\",\r\n                \"arTradeName\": \"Arabic Tarde Name\"\r\n                    }\r\n        }\r\n\r\n}\r\n"
+                        },
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/customers",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "customers"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "NEW LEGAL CUSTOMER from Kirill",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "type": "text",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"uid\": \r\n        {\r\n            \"type\": \"TAXNO\",\r\n            \"value\": \"101010\"\r\n        },\r\n    \"name\": \"ABC FullCompanyName\",\r\n    \"address\": \r\n        {\r\n            \"country\": \"JO\",\r\n            \"city\": \"CityName\",\r\n            \"stateProvinceRegion\": \"City CityName\",\r\n            \"address\": \"CityName, StreetName\"\r\n        },\r\n      \"additionalDetailsPrivate\": \r\n        {\r\n            \"taxNo\": \"value1\",\r\n            \"nationality\": \" ISO Alpha-2\",\r\n            \"estdate\": \"2020-12-05\",\r\n            \"sid\": \r\n        {\r\n            \"type\": \"commReg\",\r\n            \"value\": \"1234567890\"\r\n       }\r\n        },\r\n   \"additionalDetails\": \r\n        {\r\n            \"customerType\": \"Diplomat\",\r\n            \"engTradeName\": \"English Tarde Name\",\r\n            \"arName\": \r\n                    {\r\n                 \"estdate\": \"2020-12-08\",\r\n                \"arFullName\": \"Arabic Full Name\",\r\n                \"arTradeName\": \"Arabic Tarde Name\"\r\n                    }\r\n        }\r\n\r\n}\r\n"
+                        },
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/customers",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "customers"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET CUSTOMER INFORMATION",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/customers?uidType=SJW&uidValue=12128505",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "customers"
+                            ],
+                            "query": [
+                                {
+                                    "key": "uidType",
+                                    "value": "SJW"
+                                },
+                                {
+                                    "key": "uidValue",
+                                    "value": "12128505"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET CUSTOMER INFO BY ID",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/customers/331",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "customers",
+                                "331"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ],
+            "description": "Folder for api",
+            "protocolProfileBehavior": {}
+        },
+        {
+            "name": "2.Accounts creation and modification",
+            "item": [
+                {
+                    "name": "CREATE ACCOUNT",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "id": "b980c7ed-24ad-4eac-b80e-bd620205fdeb",
+                                "exec": [
+                                    ""
+                                ],
+                                "type": "text/javascript"
+                            }
+                        }
+                    ],
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n\"id\": {\"iban\": \"JO53ABCJ0000222222222222222222\"},\r\n\"type\": \"DFLT\",\r\n\"servicer\": {\"bic\": \"ABCJJOA0\"},\r\n\"openingDate\": \"2017-11-23\",\r\n\"closingDate\": \"2022-12-20\",\r\n\"currency\": \"JOD\"\r\n}\r\n",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/customers/453/accounts",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "customers",
+                                "453",
+                                "accounts"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET ACCOUNTS",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/customers/455/accounts",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "customers",
+                                "455",
+                                "accounts"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "UPDATE ACCOUNT",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"type\": \"DFLT\",\r\n    \"currency\": \"JOD\",\r\n    \"servicer\": {\"bic\": \"ABCJJOA0\"},\r\n    \"openingDate\": \"2020-06-09\",\r\n    \"closingDate\": \"2022-12-09\"\r\n}\r\n"
+                        },
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/accounts/342",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "accounts",
+                                "342"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE ACCOUNT",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "BJORJOA0AXXX",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "https://jorips-dev1:13443/api/cas/v1.0/accounts/204",
+                            "protocol": "https",
+                            "host": [
+                                "jorips-dev1"
+                            ],
+                            "port": "13443",
+                            "path": [
+                                "api",
+                                "cas",
+                                "v1.0",
+                                "accounts",
+                                "204"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ],
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "id": "8cabec26-6069-4f79-90e5-9187cff1457c",
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "id": "1cd2e893-1969-42fc-8010-d4549f1be3e7",
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                }
+            ],
+            "protocolProfileBehavior": {}
+        },
+        {
+            "name": "Aliases creation and modification",
+            "item": [
+                {
+                    "name": "CREATE ALIAS",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n\"type\": \"MOBL\",\r\n\"value\": \"455009656789012345\",\r\n\"startDate\": \"2017-10-15\",\r\n\"expirationDate\": \"2025-03-22\",\r\n\"status\": \"active\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/customers/455/aliases",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "customers",
+                                "455",
+                                "aliases"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "!!! therei no in spec GET ALIAS",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "BJORJOA0AXXX",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": ""
+                        },
+                        "url": {
+                            "raw": "https://jorips-dev1:13443/api/cas/v1.0/customers/306/aliases?Type=UID&uidValue=12128512128500",
+                            "protocol": "https",
+                            "host": [
+                                "jorips-dev1"
+                            ],
+                            "port": "13443",
+                            "path": [
+                                "api",
+                                "cas",
+                                "v1.0",
+                                "customers",
+                                "306",
+                                "aliases"
+                            ],
+                            "query": [
+                                {
+                                    "key": "Type",
+                                    "value": "UID"
+                                },
+                                {
+                                    "key": "uidValue",
+                                    "value": "12128512128500"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "UPDATE ALIAS",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"type\": \"EMAIL\",\r\n    \"value\": \"455GTSU@XYZ.COM\",\r\n    \"startDate\": \"2015-10-15\",\r\n    \"expirationDate\": \"2021-03-15\"\r\n}\r\n",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/aliases/364",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "aliases",
+                                "364"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "SUSPEND ALIAS",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/aliases/370/suspend",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "aliases",
+                                "370",
+                                "suspend"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "ACTIVATE ALIAS",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "BJORJOA0AXXX",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "https://jorips-dev1:13443/api/cas/v1.0/aliases/190/activate",
+                            "protocol": "https",
+                            "host": [
+                                "jorips-dev1"
+                            ],
+                            "port": "13443",
+                            "path": [
+                                "api",
+                                "cas",
+                                "v1.0",
+                                "aliases",
+                                "190",
+                                "activate"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "LINK ALIAS TO ACCOUNT",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"id\": {\"iban\": \"JO40ABCJ1111000000000000000002\"},\r\n  \"servicer\": {\"bic\": \"ABCJJOA0\"},\r\n  \"isDefault\": false\r\n}\r\n",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/aliases/367/accounts",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "aliases",
+                                "367",
+                                "accounts"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "LINK ACCOUNT TO ALIAS",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"type\": \"EMAIL\",\r\n  \"value\": \"455GTSU@XYZ.COM\",\r\n  \"isDefault\": true\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/accounts/342/aliases",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "accounts",
+                                "342",
+                                "aliases"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "SET ACCOUNT AS DEFAULT FOR ALIAS",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/accounts/344/aliases/367/default",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "accounts",
+                                "344",
+                                "aliases",
+                                "367",
+                                "default"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "UNLINK ALIAS FROM ACCOUNT",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/aliases/364/accounts/342",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "aliases",
+                                "364",
+                                "accounts",
+                                "342"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "UNLINK ACCOUNT FROM ALIAS",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "BJORJOA0AXXX",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "https://jorips-dev1:13443/api/cas/v1.0/accounts/207/aliases/190",
+                            "protocol": "https",
+                            "host": [
+                                "jorips-dev1"
+                            ],
+                            "port": "13443",
+                            "path": [
+                                "api",
+                                "cas",
+                                "v1.0",
+                                "accounts",
+                                "207",
+                                "aliases",
+                                "190"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE ALIAS",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "BJORJOA0AXXX",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "https://jorips-dev1:13443/api/cas/v1.0/aliases/188",
+                            "protocol": "https",
+                            "host": [
+                                "jorips-dev1"
+                            ],
+                            "port": "13443",
+                            "path": [
+                                "api",
+                                "cas",
+                                "v1.0",
+                                "aliases",
+                                "188"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ],
+            "protocolProfileBehavior": {}
+        },
+        {
+            "name": "3.Customer modification",
+            "item": [
+                {
+                    "name": "SUSPEND CUSTOMER",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/customers/455/suspend",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "customers",
+                                "455",
+                                "suspend"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "ACTIVATE CUSTOMER",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": ""
+                        },
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/customers/455/activate",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "customers",
+                                "455",
+                                "activate"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE CUSTOMER",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "BJORJOA0AXXX",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "https://jorips-dev1:13443/api/cas/v1.0/customers/283",
+                            "protocol": "https",
+                            "host": [
+                                "jorips-dev1"
+                            ],
+                            "port": "13443",
+                            "path": [
+                                "api",
+                                "cas",
+                                "v1.0",
+                                "customers",
+                                "283"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "UPDATE CUSTOMER INFO",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "BJORJOA0AXXX",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "name": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n\t\"uid\": {\r\n\t\t\"type\": \"PID\",\r\n\t\t\"value\": \"3004002\"\r\n\t},\r\n\t\"documentValidityDate\": \"2030-07-25\",\r\n\t\"name\": \"Maria\",\r\n\t\"surname\": \"Shatskaya\",\r\n\t\"nickName\": \"Mary\",\r\n\t\"gender\": \"FEMA\",\r\n\t\"birthDate\": \"1981-07-11\",\r\n\r\n\t\"resident\": true,\r\n\r\n\t\"placeOfBirth\": \"Leningrad\",\r\n\r\n\t\"address\": {\r\n\t\t\"country\": \"RU\",\r\n\t\t\"city\": \"Manama\",\r\n\t\t\"stateProvinceRegion\": \"Somewhere\",\r\n\t\t\"address\": \"Some street\"\r\n\t},\r\n\t\"additionalDetailsPrivate\": {\r\n\t\t\"nationality\": \"RU\",\r\n\t\t\"opendate\": \"2020-01-01\"\r\n\t},\r\n\t\"additionalDetails\": {\r\n\t\t\"customerType\": \"Individual\",\r\n\t\t\"engName\": {\r\n\t\t\t\"enSName\": \"noname1\",\r\n\t\t\t\"enTName\": \"noname2\"\r\n\t\t},\r\n\t\t\"arName\": {\r\n\t\t\t\"arFName\": \"noname3\",\r\n\t\t\t\"arSName\": \"noname4\",\r\n\t\t\t\"arTName\": \"noname5\",\r\n\t\t\t\"arLName\": \"noname6\"\r\n\t\t}\r\n\t}\r\n\r\n\r\n}"
+                        },
+                        "url": {
+                            "raw": "https://jorips-dev1:11443/api/cas/v1.0/customers/321",
+                            "protocol": "https",
+                            "host": [
+                                "jorips-dev1"
+                            ],
+                            "port": "11443",
+                            "path": [
+                                "api",
+                                "cas",
+                                "v1.0",
+                                "customers",
+                                "321"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ],
+            "protocolProfileBehavior": {}
+        },
+        {
+            "name": "4.Get Account",
+            "item": [
+                {
+                    "name": "Get Account and Customer information by Alias",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/account?aliasType=EMAIL&aliasValue=GTSU@XYZ.COM&currency=JOD&servicerBIC=ABCJJOA0&servicerMemberId=ABCJJOA0",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "account"
+                            ],
+                            "query": [
+                                {
+                                    "key": "aliasType",
+                                    "value": "EMAIL"
+                                },
+                                {
+                                    "key": "aliasValue",
+                                    "value": "GTSU@XYZ.COM"
+                                },
+                                {
+                                    "key": "currency",
+                                    "value": "JOD"
+                                },
+                                {
+                                    "key": "servicerBIC",
+                                    "value": "ABCJJOA0"
+                                },
+                                {
+                                    "key": "servicerMemberId",
+                                    "value": "ABCJJOA0"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Account and Customer information by Alias BJORJOA0",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/account?aliasType=ALIAS&aliasValue=A123456789&currency=JOD&servicerBIC=BJORJOA0&servicerMemberId=BJORJOA0",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "account"
+                            ],
+                            "query": [
+                                {
+                                    "key": "aliasType",
+                                    "value": "ALIAS"
+                                },
+                                {
+                                    "key": "aliasValue",
+                                    "value": "A123456789"
+                                },
+                                {
+                                    "key": "currency",
+                                    "value": "JOD"
+                                },
+                                {
+                                    "key": "servicerBIC",
+                                    "value": "BJORJOA0"
+                                },
+                                {
+                                    "key": "servicerMemberId",
+                                    "value": "BJORJOA0"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "!!! GET LIST OF ACCOUNTS BY ALIAS",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/accounts-info?aliasType=MOBL&aliasValue=%2B994515000000",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "accounts-info"
+                            ],
+                            "query": [
+                                {
+                                    "key": "aliasType",
+                                    "value": "MOBL"
+                                },
+                                {
+                                    "key": "aliasValue",
+                                    "value": "%2B994515000000"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET ACCOUNT AND CUSTOMER INFO by account",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/account-info?accountCode=JO67ABCJ1111000000000000000001&servicerBIC=ABCJJOA0&servicerMemberId=ABCJJOA0",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "account-info"
+                            ],
+                            "query": [
+                                {
+                                    "key": "accountCode",
+                                    "value": "JO67ABCJ1111000000000000000001"
+                                },
+                                {
+                                    "key": "servicerBIC",
+                                    "value": "ABCJJOA0"
+                                },
+                                {
+                                    "key": "servicerMemberId",
+                                    "value": "ABCJJOA0"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET ACCOUNT INFO",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/accounts/342",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "accounts",
+                                "342"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET ALIAS INFO",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "BJORJOA0AXXX",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "https://jorips-dev1:13443/api/cas/v1.0/aliases/241",
+                            "protocol": "https",
+                            "host": [
+                                "jorips-dev1"
+                            ],
+                            "port": "13443",
+                            "path": [
+                                "api",
+                                "cas",
+                                "v1.0",
+                                "aliases",
+                                "241"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET ALIASES OF ACCOUNT",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/accounts/346/aliases",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "accounts",
+                                "346",
+                                "aliases"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET ACCOUNTS FOR ALIAS",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/aliases/367/accounts",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "aliases",
+                                "367",
+                                "accounts"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET ALIASES (of customer)",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/api/cas/customers/455/aliases",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "api",
+                                "cas",
+                                "customers",
+                                "455",
+                                "aliases"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ],
+            "protocolProfileBehavior": {}
+        },
+        {
+            "name": "Payments",
+            "item": [
+                {
+                    "name": "Initiate NRT ABC to Arab",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "showPassword",
+                                    "value": false,
+                                    "type": "boolean"
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "client-reference",
+                                "value": "",
+                                "type": "text",
+                                "disabled": true
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"paymentIdentification\": {\"endToEndId\": \"ABCtoARAB0712002\"},\r\n    \"transactionTypeCode\": \"21120\",\r\n    \"instructedAmount\": {\r\n        \"currency\": \"JOD\",\r\n        \"value\": \"211.03\"\r\n    },\r\n    \r\n    \"debtor\": {\r\n        \"account\": {\"IBAN\": \"JO42ABCJ0000000000233085564510\"},\r\n        \"CASrecordId\": \"CAS44377333\",\r\n        \"isPrivate\": true,\r\n        \"name\": \"Ann Black\",\r\n        \"address\": \"debtor address\",\r\n        \"alias\": {\r\n              \"type\": \"MOBILE\",\r\n              \"value\": \"+99451501555\" }\r\n    },\r\n    \"debtorAgent\": {\"bic\": \"ABCJJOA0\"},\r\n    \"creditor\": {\r\n        \"account\": {\"IBAN\": \"JO77ARAB0000000000233085564510\"},\r\n        \"isPrivate\": false,\r\n        \"name\": \"Flowers and Gifts Co\",\r\n        \"address\": \"address2\",\r\n        \"alias\": {\r\n              \"type\": \"MOBILE\",\r\n              \"value\": \"+555515000088\" }\r\n    },\r\n    \"creditorAgent\": {\"bic\": \"ARABJOA0\"},\r\n    \"purpose\": \"transaction purpose\",\r\n    \"regulatoryReporting\": \"requlatory reporting\",\r\n    \"remittanceInformation\": \"remi info from Bryansk\",\r\n    \"instructionForNextAgent\": \"instruction For Next Agent\",\r\n    \"merchantQRDetails\": {\r\n        \"GUID\": \"JOQR\",\r\n        \"verificationCode\": \"a18827fccd22bf97856758902a32401bdc63ac88c191ff75ed8f2592623bee33OTP\",\r\n        \"merchantData\": {\r\n            \"merchantCategoryCode\": \"1023\",\r\n            \"merchantId\": \"MerchantID123\",\r\n            \"merchantName\": \"MerchantName\",\r\n            \"merchantCity\": \"City\",\r\n            \"merchantLocation\": \"Location\",\r\n            \"countryCode\": \"JO\",\r\n            \"storeLabel\": \"StoreLabel\",\r\n            \"terminalLabel\": \"Terminal\"\r\n            },\r\n        \"paymentData\": {\r\n            \"billNumber\": \"BillNo\",\r\n            \"referenceLabel\": \"REFLabel\",\r\n            \"convenienceIndicator\": \"01\",\r\n            \"convenienceFeeFixedAmount\": \"10\",\r\n            \"convenienceFeePercentage\": \"37\",\r\n            \"dateTime\": \"2020-05-10 13:23:44\"\r\n            },\r\n        \"customerData\": {\r\n        \"mobileNumber\": \"MobileNumber\",\r\n        \"loyaltyNumber\": \"LoyaltyNumber\",\r\n        \"customerLabel\": \"CONSUMERID\"\r\n        }  \r\n    }\r\n}"
+                        },
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/input/instant-payment/CLarabREF0712002?country=JO",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "input",
+                                "instant-payment",
+                                "CLarabREF0712002"
+                            ],
+                            "query": [
+                                {
+                                    "key": "country",
+                                    "value": "JO"
+                                },
+                                {
+                                    "key": "ABCHANNEL0012",
+                                    "value": null,
+                                    "disabled": true
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Initiate NRT ABC to BOJ",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "showPassword",
+                                    "value": false,
+                                    "type": "boolean"
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "client-reference",
+                                "type": "text",
+                                "value": "",
+                                "disabled": true
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"paymentIdentification\": {\"endToEndId\": \"ABCtoBOJ0712001\"},\r\n    \"transactionTypeCode\": \"21120\",\r\n    \"instructedAmount\": {\r\n        \"currency\": \"JOD\",\r\n        \"value\": \"500.00\"\r\n    },\r\n   \r\n    \"debtor\": {\r\n        \"account\": {\"IBAN\": \"JO75ABCJ0399000111555000111555\"},\r\n        \"CASrecordId\": \"CAS44377333\",\r\n        \"isPrivate\": true,\r\n        \"name\": \"Ann Black\",\r\n        \"address\": \"debtor address\",\r\n        \"alias\": {\r\n              \"type\": \"MOBILE\",\r\n              \"value\": \"+99451501555\" }\r\n    },\r\n    \"debtorAgent\": {\"bic\": \"ABCJJOA0\"},\r\n    \"creditor\": {\r\n        \"account\": {\"IBAN\": \"JO81BJOR0398111222333444555666\"},\r\n        \"isPrivate\": false,\r\n        \"name\": \"Flowers and Gifts Co\",\r\n        \"address\": \"address2\",\r\n        \"alias\": {\r\n              \"type\": \"MOBILE\",\r\n              \"value\": \"+555515000088\" }\r\n    },\r\n    \"creditorAgent\": {\"bic\": \"BJORJOA0\"},\r\n    \"purpose\": \"transaction purpose\",\r\n    \"regulatoryReporting\": \"requlatory reporting\",\r\n    \"remittanceInformation\": \"remi info from Bryansk\",\r\n    \"instructionForNextAgent\": \"instruction For Next Agent\",\r\n    \"merchantQRDetails\": {\r\n        \"GUID\": \"JOQR\",\r\n        \"verificationCode\": \"a18827fccd22bf97856758902a32401bdc63ac88c191ff75ed8f2592623bee33OTP\",\r\n        \"merchantData\": {\r\n            \"merchantCategoryCode\": \"1023\",\r\n            \"merchantId\": \"MerchantID123\",\r\n            \"merchantName\": \"MerchantName\",\r\n            \"merchantCity\": \"City\",\r\n            \"merchantLocation\": \"Location\",\r\n            \"countryCode\": \"JO\",\r\n            \"storeLabel\": \"StoreLabel\",\r\n            \"terminalLabel\": \"Terminal\"\r\n            },\r\n        \"paymentData\": {\r\n            \"billNumber\": \"BillNo\",\r\n            \"referenceLabel\": \"REFLabel\",\r\n            \"convenienceIndicator\": \"01\",\r\n            \"convenienceFeeFixedAmount\": \"10\",\r\n            \"convenienceFeePercentage\": \"37\",\r\n            \"dateTime\": \"2020-05-10 13:23:44\"\r\n            },\r\n        \"customerData\": {\r\n        \"mobileNumber\": \"MobileNumber\",\r\n        \"loyaltyNumber\": \"LoyaltyNumber\",\r\n        \"customerLabel\": \"CONSUMERID\"\r\n        }  \r\n    }\r\n}"
+                        },
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/input/instant-payment/CLabcREF007120001?country=JO",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "input",
+                                "instant-payment",
+                                "CLabcREF007120001"
+                            ],
+                            "query": [
+                                {
+                                    "key": "country",
+                                    "value": "JO"
+                                },
+                                {
+                                    "key": "ABCHANNEL0012",
+                                    "value": null,
+                                    "disabled": true
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Initiate NRT ABC to ABC",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "showPassword",
+                                    "value": false,
+                                    "type": "boolean"
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "client-reference",
+                                "type": "text",
+                                "value": "",
+                                "disabled": true
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"paymentIdentification\": {\"endToEndId\": \"ABCNRT30110050\"},\r\n    \"transactionTypeCode\": \"21120\",\r\n    \"instructedAmount\": {\r\n        \"currency\": \"JOD\",\r\n        \"value\": \"500.00\"\r\n    },\r\n   \r\n    \"debtor\": {\r\n        \"account\": {\"IBAN\": \"JO75ABCJ0399000111555000111555\"},\r\n        \"CASrecordId\": \"CAS44377333\",\r\n        \"isPrivate\": true,\r\n        \"name\": \"Ann Black\",\r\n        \"address\": \"debtor address\",\r\n        \"alias\": {\r\n              \"type\": \"MOBILE\",\r\n              \"value\": \"+99451501555\" }\r\n    },\r\n    \"debtorAgent\": {\"bic\": \"ABCJJOA0\"},\r\n    \"creditor\": {\r\n        \"account\": {\"IBAN\": \"JO81BJOR0398111222333444555666\"},\r\n        \"isPrivate\": false,\r\n        \"name\": \"Flowers and Gifts Co\",\r\n        \"address\": \"address2\",\r\n        \"alias\": {\r\n              \"type\": \"MOBILE\",\r\n              \"value\": \"+555515000088\" }\r\n    },\r\n    \"creditorAgent\": {\"bic\": \"ABCJJOA0\"},\r\n    \"purpose\": \"transaction purpose\",\r\n    \"regulatoryReporting\": \"requlatory reporting\",\r\n    \"remittanceInformation\": \"remi info from Bryansk\",\r\n    \"instructionForNextAgent\": \"instruction For Next Agent\",\r\n    \"merchantQRDetails\": {\r\n        \"GUID\": \"JOQR\",\r\n        \"verificationCode\": \"a18827fccd22bf97856758902a32401bdc63ac88c191ff75ed8f2592623bee33OTP\",\r\n        \"merchantData\": {\r\n            \"merchantCategoryCode\": \"1023\",\r\n            \"merchantId\": \"MerchantID123\",\r\n            \"merchantName\": \"MerchantName\",\r\n            \"merchantCity\": \"City\",\r\n            \"merchantLocation\": \"Location\",\r\n            \"countryCode\": \"JO\",\r\n            \"storeLabel\": \"StoreLabel\",\r\n            \"terminalLabel\": \"Terminal\"\r\n            },\r\n        \"paymentData\": {\r\n            \"billNumber\": \"BillNo\",\r\n            \"referenceLabel\": \"REFLabel\",\r\n            \"convenienceIndicator\": \"01\",\r\n            \"convenienceFeeFixedAmount\": \"10\",\r\n            \"convenienceFeePercentage\": \"37\",\r\n            \"dateTime\": \"2020-05-10 13:23:44\"\r\n            },\r\n        \"customerData\": {\r\n        \"mobileNumber\": \"MobileNumber\",\r\n        \"loyaltyNumber\": \"LoyaltyNumber\",\r\n        \"customerLabel\": \"CONSUMERID\"\r\n        }  \r\n    }\r\n}"
+                        },
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/input/instant-payment/CLIENTREF30110506?country=JO",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "input",
+                                "instant-payment",
+                                "CLIENTREF30110506"
+                            ],
+                            "query": [
+                                {
+                                    "key": "country",
+                                    "value": "JO"
+                                },
+                                {
+                                    "key": "ABCHANNEL0012",
+                                    "value": null,
+                                    "disabled": true
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Initiate RTP ABC to Arab",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "showPassword",
+                                    "value": false,
+                                    "type": "boolean"
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "client-reference",
+                                "type": "text",
+                                "value": "",
+                                "disabled": true
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"requestIdentification\": {\"endToEndId\": \"RTPABCARAB071208\"},\r\n    \"transactionTypeCode\": \"21120\",\r\n    \"instructedAmount\": {\r\n        \"currency\": \"JOD\",\r\n        \"value\": \"211.03\"\r\n    },\r\n    \r\n    \"debtor\": {\r\n        \"account\": {\"IBAN\": \"JO77ARAB0000000000233085564510\"},\r\n        \"name\": \"Ann Black\",\r\n        \"address\": \"debtor address\"\r\n    },\r\n    \"debtorAgent\": {\"bic\": \"ARABJOA0\"},\r\n    \"creditor\": {\r\n        \"account\": {\"IBAN\": \"JO94ABCJ1111000000000000000000\"},\r\n        \"name\": \"creditor\",\r\n        \"address\": \"address2\"\r\n    },\r\n    \"creditorAgent\": {\"bic\": \"ABCJJOA0\"},\r\n    \"purpose\": \"transaction purpose\",\r\n    \"regulatoryReporting\": \"requlatory reporting\",\r\n    \"remittanceInformation\": \"remi info from Bryansk\",\r\n    \"instructionForNextAgent\": \"instruction For Next Agent\",\r\n    \"merchantQRDetails\": {\r\n        \"GUID\": \"JOQR\",\r\n        \"verificationCode\": \"a18827fccd22bf97856758902a32401bdc63ac88c191ff75ed8f2592623bee33OTP\",\r\n        \"merchantData\": {\r\n            \"merchantCategoryCode\": \"1023\",\r\n            \"merchantId\": \"MerchantID123\",\r\n            \"merchantName\": \"MerchantName\",\r\n            \"merchantCity\": \"City\",\r\n            \"merchantLocation\": \"Location\",\r\n            \"countryCode\": \"JO\",\r\n            \"storeLabel\": \"StoreLabel\",\r\n            \"terminalLabel\": \"Terminal\"\r\n            },\r\n        \"paymentData\": {\r\n            \"billNumber\": \"BillNo\",\r\n            \"referenceLabel\": \"REFLabel\",\r\n            \"convenienceIndicator\": \"01\",\r\n            \"convenienceFeeFixedAmount\": \"10\",\r\n            \"convenienceFeePercentage\": \"37\",\r\n            \"dateTime\": \"2020-05-10 13:23:44\"\r\n            },\r\n        \"customerData\": {\r\n        \"mobileNumber\": \"MobileNumber\",\r\n        \"loyaltyNumber\": \"LoyaltyNumber\",\r\n        \"customerLabel\": \"CONSUMERID\"\r\n        }  \r\n    }\r\n}"
+                        },
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/input/request-to-pay/RTPtoARAB0712008?country=JO",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "input",
+                                "request-to-pay",
+                                "RTPtoARAB0712008"
+                            ],
+                            "query": [
+                                {
+                                    "key": "country",
+                                    "value": "JO"
+                                },
+                                {
+                                    "key": "ABCHANNEL0012",
+                                    "value": null,
+                                    "disabled": true
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Initiate RETURN ABC to Arab",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "showPassword",
+                                    "value": false,
+                                    "type": "boolean"
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "client-reference",
+                                "type": "text",
+                                "value": "",
+                                "disabled": true
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n\t\"originalPayment\": {\r\n\t\t\"paymentIdentification\": {\r\n\t\t\t\"endToEndId\": \"NOTPROVIDED\"\r\n\t\t},\r\n\t\t\"valueDate\": \"2020-11-27\",\r\n\t\t\"senderAgent\": {\r\n\t\t\t\"bic\": \"ARABJOA0\"\r\n\t\t}\r\n\t},\r\n\t\"paymentIdentification\": {\r\n\t\t\"endToEndId\": \"QRarabIPP0000032\"\r\n\t},\r\n\t\"transactionTypeCode\": \"111\",\r\n\t\"instructedAmount\": {\r\n\t\t\"currency\": \"JOD\",\r\n\t\t\"value\": \"10.123\"\r\n\t},\r\n\t\"valueDate\": \"2020-11-27\",\r\n\t\"debtor\": {\r\n\t\t\"account\": {\r\n\t\t\t\"IBAN\": \"BH92BJOR00001111000022\"\r\n\t\t},\r\n\t\t\"CASrecordId\": \"CAS3333335\",\r\n\t\t\"isPrivate\": false,\r\n\t\t\"name\": \"DebName\",\r\n\t\t\"address\": \"1234567890123456789012345678901234567890123456789012345678901234567890\"\r\n\t},\r\n\t\"debtorAgent\": {\r\n\t\t\"bic\": \"BJORJOA0\"\r\n\t},\r\n\t\"creditor\": {\r\n\t\t\"account\": {\r\n\t\t\t\"IBAN\": \"JO75ABCJ0399000111555000111555\"\r\n\t\t},\r\n\r\n\t\t\"name\": \"1234567890123456789012345678901234567890123456789012345678901234567890\",\r\n\t\t\"address\": \"1234567890123456789012345678901234567890123456789012345678901234567890\"\r\n\r\n\t},\r\n\t\"creditorAgent\": {\r\n\t\t\"bic\": \"ABCJJOA0\"\r\n\t},\r\n\t\"purpose\": \"purpose\",\r\n\t\"regulatoryReporting\": \"regulReporting\",\r\n\t\"remittanceInformation\": \"remiInfo\",\r\n\t\"instructionForNextAgent\": \"\",\r\n\t\"returnReason\": {\r\n\t\t\"reasonCode\": \"MD06\",\r\n\t\t\"reasonDescription\": \"Return\"\r\n\t}\r\n\r\n}"
+                        },
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/input/return-instant-payment/retABCtoAB071205",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "input",
+                                "return-instant-payment",
+                                "retABCtoAB071205"
+                            ],
+                            "query": [
+                                {
+                                    "key": "ABCHANNEL0012",
+                                    "value": null,
+                                    "disabled": true
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Initiate RETURN  to ABC - not possible in the current implementation",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "showPassword",
+                                    "value": false,
+                                    "type": "boolean"
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "client-reference",
+                                "type": "text",
+                                "value": "",
+                                "disabled": true
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \t\"originalPayment\": {\r\n\t\t\"paymentIdentification\": {\r\n\t\t\t\"endToEndId\": \"ABCJ201207000016\"\r\n\t\t},\r\n\t\t\"valueDate\": \"2020-11-27\",\r\n\t\t\"senderAgent\": {\r\n\t\t\t\"bic\": \"ABCJJOA0\"\r\n\t\t}\r\n\t},\r\n    \"paymentIdentification\": {\"endToEndId\": \"retToABC07120001\"},\r\n    \"transactionTypeCode\": \"21120\",\r\n    \"instructedAmount\": {\r\n        \"currency\": \"JOD\",\r\n        \"value\": \"500.00\"\r\n    },\r\n   \r\n    \"debtor\": {\r\n        \"account\": {\"IBAN\": \"JO75ABCJ0399000111555000111555\"},\r\n        \"CASrecordId\": \"CAS44377333\",\r\n        \"isPrivate\": true,\r\n        \"name\": \"Ann Black\",\r\n        \"address\": \"debtor address\",\r\n        \"alias\": {\r\n              \"type\": \"MOBILE\",\r\n              \"value\": \"+99451501555\" }\r\n    },\r\n    \"debtorAgent\": {\"bic\": \"ABCJJOA0\"},\r\n    \"creditor\": {\r\n        \"account\": {\"IBAN\": \"JO81BJOR0398111222333444555666\"},\r\n        \"isPrivate\": false,\r\n        \"name\": \"Flowers and Gifts Co\",\r\n        \"address\": \"address2\",\r\n        \"alias\": {\r\n              \"type\": \"MOBILE\",\r\n              \"value\": \"+555515000088\" }\r\n    },\r\n    \"creditorAgent\": {\"bic\": \"ABCJJOA0\"},\r\n    \"purpose\": \"transaction purpose\",\r\n    \"regulatoryReporting\": \"requlatory reporting\",\r\n    \"remittanceInformation\": \"remi info from Bryansk\",\r\n    \"instructionForNextAgent\": \"instruction For Next Agent\",\r\n    \t\"returnReason\": {\r\n\t\t\"reasonCode\": \"MD06\",\r\n\t\t\"reasonDescription\": \"Return\"\r\n\t}\r\n   \r\n    \r\n}"
+                        },
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/input/return-instant-payment/retABCtoABC007?country=JO",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "input",
+                                "return-instant-payment",
+                                "retABCtoABC007"
+                            ],
+                            "query": [
+                                {
+                                    "key": "country",
+                                    "value": "JO"
+                                },
+                                {
+                                    "key": "ABCHANNEL0012",
+                                    "value": null,
+                                    "disabled": true
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Initiate return instant payment ABC JO to BOJ",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "showPassword",
+                                    "value": false,
+                                    "type": "boolean"
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "client-reference",
+                                "type": "text",
+                                "value": "",
+                                "disabled": true
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n\t\"originalPayment\": {\r\n\t\t\"paymentIdentification\": {\r\n\t\t\t\"endToEndId\": \"IPP30110000026\"\r\n\t\t},\r\n\t\t\"valueDate\": \"2020-11-27\",\r\n\t\t\"senderAgent\": {\r\n\t\t\t\"bic\": \"BJORJOA0\"\r\n\t\t}\r\n\t},\r\n\t\"paymentIdentification\": {\r\n\t\t\"endToEndId\": \"IPP30110000026\"\r\n\t},\r\n\t\"transactionTypeCode\": \"111\",\r\n\t\"instructedAmount\": {\r\n\t\t\"currency\": \"JOD\",\r\n\t\t\"value\": \"10.123\"\r\n\t},\r\n\t\"valueDate\": \"2020-11-27\",\r\n\t\"debtor\": {\r\n\t\t\"account\": {\r\n\t\t\t\"IBAN\": \"BH92BJOR00001111000022\"\r\n\t\t},\r\n\t\t\"CASrecordId\": \"CAS3333335\",\r\n\t\t\"isPrivate\": false,\r\n\t\t\"name\": \"DebName\",\r\n\t\t\"address\": \"1234567890123456789012345678901234567890123456789012345678901234567890\"\r\n\t},\r\n\t\"debtorAgent\": {\r\n\t\t\"bic\": \"BJORJOA0\"\r\n\t},\r\n\t\"creditor\": {\r\n\t\t\"account\": {\r\n\t\t\t\"IBAN\": \"JO75ABCJ0399000111555000111555\"\r\n\t\t},\r\n\r\n\t\t\"name\": \"1234567890123456789012345678901234567890123456789012345678901234567890\",\r\n\t\t\"address\": \"1234567890123456789012345678901234567890123456789012345678901234567890\"\r\n\r\n\t},\r\n\t\"creditorAgent\": {\r\n\t\t\"bic\": \"ABCJJOA0\"\r\n\t},\r\n\t\"purpose\": \"purpose\",\r\n\t\"regulatoryReporting\": \"regulReporting\",\r\n\t\"remittanceInformation\": \"remiInfo\",\r\n\t\"instructionForNextAgent\": \"\",\r\n\t\"returnReason\": {\r\n\t\t\"reasonCode\": \"MD06\",\r\n\t\t\"reasonDescription\": \"Return\"\r\n\t}\r\n\r\n}"
+                        },
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/input/return-instant-payment/retABCtoBOJ00302",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "input",
+                                "return-instant-payment",
+                                "retABCtoBOJ00302"
+                            ],
+                            "query": [
+                                {
+                                    "key": "ABCHANNEL0012",
+                                    "value": null,
+                                    "disabled": true
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "R TEST return instant payment ABC JO to BOJ Copy",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "showPassword",
+                                    "value": false,
+                                    "type": "boolean"
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "client-reference",
+                                "type": "text",
+                                "value": "",
+                                "disabled": true
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n\t\"originalPayment\": {\r\n\t\t\"paymentIdentification\": {\r\n\t\t\t\"endToEndId\": \"IPP30110000026\"\r\n\t\t},\r\n\t\t\"valueDate\": \"2020-11-27\",\r\n\t\t\"senderAgent\": {\r\n\t\t\t\"bic\": \"BJORJOA0\"\r\n\t\t}\r\n\t},\r\n\t\"paymentIdentification\": {\r\n\t\t\"endToEndId\": \"IPP30110000026\"\r\n\t},\r\n\t\"transactionTypeCode\": \"111\",\r\n\t\"instructedAmount\": {\r\n\t\t\"currency\": \"JOD\",\r\n\t\t\"value\": \"10.123\"\r\n\t},\r\n\t\"valueDate\": \"2020-11-27\",\r\n\t\"debtor\": {\r\n\t\t\"account\": {\r\n\t\t\t\"IBAN\": \"JO75ABCJ0399000111555000111555\"\r\n\t\t},\r\n\r\n\t\t\"name\": \"1234567890123456789012345678901234567890123456789012345678901234567890\",\r\n\t\t\"address\": \"1234567890123456789012345678901234567890123456789012345678901234567890\"\r\n\r\n\t},\r\n\t\"debtorAgent\": {\r\n\t\t\"bic\": \"ABCJJOA0\"\r\n\t},\r\n    \"creditor\": {\r\n\t\t\"account\": {\r\n\t\t\t\"IBAN\": \"BH92BJOR00001111000022\"\r\n\t\t},\r\n\t\t\"CASrecordId\": \"CAS3333335\",\r\n\t\t\"isPrivate\": false,\r\n\t\t\"name\": \"DebName\",\r\n\t\t\"address\": \"1234567890123456789012345678901234567890123456789012345678901234567890\"\r\n\t},\r\n\t\"creditorAgent\": {\r\n\t\t\"bic\": \"BJORJOA0\"\r\n\t},\r\n\t\"purpose\": \"purpose\",\r\n\t\"regulatoryReporting\": \"regulReporting\",\r\n\t\"remittanceInformation\": \"remiInfo\",\r\n\t\"instructionForNextAgent\": \"\",\r\n\t\"returnReason\": {\r\n\t\t\"reasonCode\": \"MD06\",\r\n\t\t\"reasonDescription\": \"Return\"\r\n\t}\r\n\r\n}"
+                        },
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/input/return-instant-payment/retABCtoBOJ00303",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "input",
+                                "return-instant-payment",
+                                "retABCtoBOJ00303"
+                            ],
+                            "query": [
+                                {
+                                    "key": "ABCHANNEL0012",
+                                    "value": null,
+                                    "disabled": true
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "R TEST payment ABC JO QR to BOJ Copy",
+                    "request": {
+                        "auth": {
+                            "type": "basic",
+                            "basic": [
+                                {
+                                    "key": "username",
+                                    "value": "ann117",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "1",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "showPassword",
+                                    "value": false,
+                                    "type": "boolean"
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "client-reference",
+                                "type": "text",
+                                "value": "",
+                                "disabled": true
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"paymentIdentification\": {\"endToEndId\": \"ABCNRT01120010\"},\r\n    \"transactionTypeCode\": \"21120\",\r\n    \"instructedAmount\": {\r\n        \"currency\": \"JOD\",\r\n        \"value\": \"500.00\"\r\n    },\r\n   \r\n    \"debtor\": {\r\n        \"account\": {\"IBAN\": \"JO75ABCJ0399000111555000111555\"},\r\n        \"CASrecordId\": \"CAS44377333\",\r\n        \"isPrivate\": true,\r\n        \"name\": \"Ann Black\",\r\n        \"address\": \"debtor address\",\r\n        \"alias\": {\r\n              \"type\": \"MOBILE\",\r\n              \"value\": \"+99451501555\" }\r\n    },\r\n    \"debtorAgent\": {\"bic\": \"ABCJJOA0\"},\r\n    \"creditor\": {\r\n        \"account\": {\"IBAN\": \"JO81BJOR0398111222333444555666\"},\r\n        \"isPrivate\": false,\r\n        \"name\": \"Flowers and Gifts Co\",\r\n        \"address\": \"address2\",\r\n        \"alias\": {\r\n              \"type\": \"MOBILE\",\r\n              \"value\": \"+555515000088\" }\r\n    },\r\n    \"creditorAgent\": {\"bic\": \"BJORJOA0\"},\r\n    \"purpose\": \"transaction purpose\",\r\n    \"regulatoryReporting\": \"requlatory reporting\",\r\n    \"remittanceInformation\": \"remi info from Bryansk\",\r\n    \"instructionForNextAgent\": \"instruction For Next Agent\",\r\n    \"merchantQRDetails\": {\r\n        \"GUID\": \"JOQR\",\r\n        \"verificationCode\": \"a18827fccd22bf97856758902a32401bdc63ac88c191ff75ed8f2592623bee33OTP\",\r\n        \"merchantData\": {\r\n            \"merchantCategoryCode\": \"1023\",\r\n            \"merchantId\": \"MerchantID123\",\r\n            \"merchantName\": \"MerchantName\",\r\n            \"merchantCity\": \"City\",\r\n            \"merchantLocation\": \"Location\",\r\n            \"countryCode\": \"JO\",\r\n            \"storeLabel\": \"StoreLabel\",\r\n            \"terminalLabel\": \"Terminal\"\r\n            },\r\n        \"paymentData\": {\r\n            \"billNumber\": \"BillNo\",\r\n            \"referenceLabel\": \"REFLabel\",\r\n            \"convenienceIndicator\": \"01\",\r\n            \"convenienceFeeFixedAmount\": \"10\",\r\n            \"convenienceFeePercentage\": \"37\",\r\n            \"dateTime\": \"2020-05-10 13:23:44\"\r\n            },\r\n        \"customerData\": {\r\n        \"mobileNumber\": \"MobileNumber\",\r\n        \"loyaltyNumber\": \"LoyaltyNumber\",\r\n        \"customerLabel\": \"CONSUMERID\"\r\n        }  \r\n    }\r\n}"
+                        },
+                        "url": {
+                            "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/input/instant-payment/CLIENTREF01120010?country=JO",
+                            "protocol": "https",
+                            "host": [
+                                "pg",
+                                "moscow",
+                                "cma",
+                                "ru"
+                            ],
+                            "port": "8983",
+                            "path": [
+                                "portal",
+                                "mvc",
+                                "0",
+                                "input",
+                                "instant-payment",
+                                "CLIENTREF01120010"
+                            ],
+                            "query": [
+                                {
+                                    "key": "country",
+                                    "value": "JO"
+                                },
+                                {
+                                    "key": "ABCHANNEL0012",
+                                    "value": null,
+                                    "disabled": true
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ],
+            "protocolProfileBehavior": {}
+        },
+        {
+            "name": "Request to get status of payment",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "auth": {
+                    "type": "basic",
+                    "basic": [
+                        {
+                            "key": "username",
+                            "value": "ann117",
+                            "type": "string"
+                        },
+                        {
+                            "key": "password",
+                            "value": "1",
+                            "type": "string"
+                        },
+                        {
+                            "key": "showPassword",
+                            "value": false,
+                            "type": "boolean"
+                        }
+                    ]
+                },
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "Receiver-Participant-Code",
+                        "type": "text",
+                        "value": "BJORJOA0"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": ""
+                },
+                "url": {
+                    "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/payments/2020-11-27/ABCJ201128000001/status?country=JO",
+                    "protocol": "https",
+                    "host": [
+                        "pg",
+                        "moscow",
+                        "cma",
+                        "ru"
+                    ],
+                    "port": "8983",
+                    "path": [
+                        "portal",
+                        "mvc",
+                        "0",
+                        "payments",
+                        "2020-11-27",
+                        "ABCJ201128000001",
+                        "status"
+                    ],
+                    "query": [
+                        {
+                            "key": "ABCHANNEL0012",
+                            "value": null,
+                            "disabled": true
+                        },
+                        {
+                            "key": "country",
+                            "value": "JO"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Request to pay status",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "auth": {
+                    "type": "basic",
+                    "basic": [
+                        {
+                            "key": "username",
+                            "value": "ann117",
+                            "type": "string"
+                        },
+                        {
+                            "key": "password",
+                            "value": "1",
+                            "type": "string"
+                        },
+                        {
+                            "key": "showPassword",
+                            "value": false,
+                            "type": "boolean"
+                        }
+                    ]
+                },
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "Receiver-Participant-Code",
+                        "type": "text",
+                        "value": "BJORJOA0"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": ""
+                },
+                "url": {
+                    "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/payments/2020-11-27/ABCJ201128000001/status?country=JO",
+                    "protocol": "https",
+                    "host": [
+                        "pg",
+                        "moscow",
+                        "cma",
+                        "ru"
+                    ],
+                    "port": "8983",
+                    "path": [
+                        "portal",
+                        "mvc",
+                        "0",
+                        "payments",
+                        "2020-11-27",
+                        "ABCJ201128000001",
+                        "status"
+                    ],
+                    "query": [
+                        {
+                            "key": "ABCHANNEL0012",
+                            "value": null,
+                            "disabled": true
+                        },
+                        {
+                            "key": "country",
+                            "value": "JO"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Request to get status of payment Copy",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "auth": {
+                    "type": "basic",
+                    "basic": [
+                        {
+                            "key": "username",
+                            "value": "ann117",
+                            "type": "string"
+                        },
+                        {
+                            "key": "password",
+                            "value": "1",
+                            "type": "string"
+                        },
+                        {
+                            "key": "showPassword",
+                            "value": false,
+                            "type": "boolean"
+                        }
+                    ]
+                },
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "Receiver-Participant-Code",
+                        "type": "text",
+                        "value": "BJORJOA0"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": ""
+                },
+                "url": {
+                    "raw": "https://pg.moscow.cma.ru:8983/portal/mvc/0/payments/2020-11-27/ABCJ201128000001/status?country=JO",
+                    "protocol": "https",
+                    "host": [
+                        "pg",
+                        "moscow",
+                        "cma",
+                        "ru"
+                    ],
+                    "port": "8983",
+                    "path": [
+                        "portal",
+                        "mvc",
+                        "0",
+                        "payments",
+                        "2020-11-27",
+                        "ABCJ201128000001",
+                        "status"
+                    ],
+                    "query": [
+                        {
+                            "key": "ABCHANNEL0012",
+                            "value": null,
+                            "disabled": true
+                        },
+                        {
+                            "key": "country",
+                            "value": "JO"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        }
+    ],
+    "auth": {
+        "type": "basic",
+        "basic": [
+            {
+                "key": "password",
+                "value": "1",
+                "type": "string"
+            },
+            {
+                "key": "username",
+                "value": "TESTJOA0AXXX",
+                "type": "string"
+            }
+        ]
+    },
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "id": "9ed8e02c-6bf8-476e-9247-06b6737a0e15",
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "id": "7116bc52-34f1-44ee-8dc5-1bcc1326c70e",
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "id": "7d2ea75a-4719-47ff-965a-2c4c55364994",
+            "key": "url",
+            "value": "https://jorips-dev1.moscow.cma.ru:13443/api/cas/v1.0",
+            "type": "string",
+            "disabled": true
+        },
+        {
+            "id": "b36ef1f3-f682-40f9-8436-b150765b6f85",
+            "key": "url",
+            "value": "https://10.18.75.21:11443/api/cas/v1.0",
+            "type": "string"
+        },
+        {
+            "id": "003c1e5d-4cfc-4c4b-894b-177570c7bc0c",
+            "key": "url",
+            "value": "https://napas-app-srv04.moscow.cma.ru:8542/api/cas/v1.0",
+            "type": "string",
+            "disabled": true
+        }
+    ],
+    "protocolProfileBehavior": {}
+}
