@@ -1,0 +1,836 @@
+{
+	"info": {
+		"_postman_id": "a059ca75-8bf7-4bc8-a764-1f22e18d13fd",
+		"name": "Integration-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TMSX-Payment",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key 81263d33-0343-49bc-bb84-51a265996e35"
+					},
+					{
+						"key": "clientId",
+						"value": "afs"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"paymentIdentification\": {\"endToEndId\": \"AKDtoBOJ1612202\"},\r\n    \"transactionTypeCode\": \"001\",\r\n    \"instructedAmount\": {\r\n        \"currency\": \"JOD\",\r\n        \"value\": \"15.00\"\r\n    },\r\n    \"debtor\": {\r\n        \"account\": {\"IBAN\": \"JO52ABCJ0001001100440901010012\"},\r\n        \"CASrecordId\": \"CAS44377333\",\r\n        \"isPrivate\": true,\r\n        \"name\": \"Ann Black\",\r\n        \"address\": \"debtor address\",\r\n        \"alias\": {\r\n              \"type\": \"MOBILE\",\r\n              \"value\": \"+99451501555\" }\r\n    },\r\n    \"debtorAgent\": {\"bic\": \"ABCJJOA0\"},\r\n    \"creditor\": {\r\n        \"account\": {\"IBAN\": \"JO56TEST0000000000002509181188\"},\r\n        \"isPrivate\": false,\r\n        \"name\": \"Flowers and Gifts Co\",\r\n        \"address\": \"address2\",\r\n        \"alias\": {\r\n              \"type\": \"MOBILE\",\r\n              \"value\": \"+555515000088\" }\r\n    },\r\n    \"creditorAgent\": {\"bic\": \"TESTJOA0\"},\r\n    \"purpose\": \"transaction purpose\",\r\n    \"regulatoryReporting\": \"requlatory reporting\",\r\n    \"remittanceInformation\": \"remi info from Bryansk\",\r\n    \"instructionForNextAgent\": \"instruction For Next Agent\",\r\n    \"merchantQRDetails\": {\r\n        \"verificationCode\": \"a18827fccd22bf97856758902a32401bdc63ac88c191ff75ed8f2592623bee33OTP\",\r\n        \"merchantData\": {\r\n            \"merchantCategoryCode\": \"1023\",\r\n            \"merchantId\": \"MerchantID123\",\r\n            \"merchantName\": \"MerchantName\",\r\n            \"merchantCity\": \"City\",\r\n            \"merchantLocation\": \"Location\",\r\n            \"countryCode\": \"JO\",\r\n            \"storeLabel\": \"StoreLabel\",\r\n            \"terminalLabel\": \"Terminal\"\r\n            },\r\n        \"paymentData\": {\r\n            \"billNumber\": \"B0239324\",\r\n            \"referenceLabel\": \"REF101010\",\r\n            \"convenienceIndicator\": \"01\",\r\n            \"convenienceFeeFixedAmount\": \"10\",\r\n            \"convenienceFeePercentage\": \"37\",\r\n            \"dateTime\": \"2020-05-10 13:23:44\"\r\n            },\r\n        \"customerData\": {\r\n        \"mobileNumber\": \"9898098980\",\r\n        \"loyaltyNumber\": \"123456\",\r\n        \"customerLabel\": \"VPK02939\"\r\n        }\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://10.150.211.229:8444/api/v1/tmsx-payments/input/instant-payment/ITM124?unit=JOR&country=JO",
+					"protocol": "https",
+					"host": [
+						"10",
+						"150",
+						"211",
+						"229"
+					],
+					"port": "8444",
+					"path": [
+						"api",
+						"v1",
+						"tmsx-payments",
+						"input",
+						"instant-payment",
+						"ITM124"
+					],
+					"query": [
+						{
+							"key": "unit",
+							"value": "JOR"
+						},
+						{
+							"key": "country",
+							"value": "JO"
+						}
+					]
+				},
+				"description": "TMSx Payment"
+			},
+			"response": []
+		},
+		{
+			"name": "CAS-GetCustomer",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key 81263d33-0343-49bc-bb84-51a265996e35"
+					},
+					{
+						"key": "clientId",
+						"value": "afs"
+					}
+				],
+				"url": {
+					"raw": "https://10.150.211.229:8444/api/v1/tmsx-cas/customers?uidType=NID&uidValue=1212850512&unit=JOR&country=JO",
+					"protocol": "https",
+					"host": [
+						"10",
+						"150",
+						"211",
+						"229"
+					],
+					"port": "8444",
+					"path": [
+						"api",
+						"v1",
+						"tmsx-cas",
+						"customers"
+					],
+					"query": [
+						{
+							"key": "uidType",
+							"value": "NID"
+						},
+						{
+							"key": "uidValue",
+							"value": "1212850512"
+						},
+						{
+							"key": "unit",
+							"value": "JOR"
+						},
+						{
+							"key": "country",
+							"value": "JO"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAS-PostCustomer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key 81263d33-0343-49bc-bb84-51a265996e35"
+					},
+					{
+						"key": "clientId",
+						"value": "afs"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uid\":\r\n        {\r\n            \"type\": \"NID\",\r\n            \"value\": \"9762041980\"\r\n        },\r\n    \"documentValidityDate\": \"2030-07-25\",\r\n    \"resident\": false,\r\n    \"name\": \"name Son of Jordanian Women\",\r\n    \"surname\": \"Sirname\",\r\n    \"nickName\": \"nickname 12345\",\r\n    \"gender\": \"MALE\",\r\n    \"birthDate\": \"1976-02-20\",\r\n    \"placeOfBirth\": \"City, Country\",\r\n    \"address\":\r\n        {\r\n            \"country\": \"JO\",\r\n            \"city\": \"adr - CityName\",\r\n            \"stateProvinceRegion\": \"adr - state Provise rgn City CityName\",\r\n            \"address\": \"adr -adr CityName, StreetName\"\r\n        },\r\n\"additionalDetailsPrivate\":\r\n        {\r\n            \"nationality\": \"IN\",\r\n            \"opendate\": \"2020-06-11\"\r\n        },\r\n\r\n\"additionalDetails\":\r\n        {\r\n    \"customerType\": \"Individual\",\r\n            \"engName\":\r\n            {\r\n            \"enSName\":\"eng Second Name\",\r\n            \"enTName\":\"eng Third Name\"\r\n            },\r\n            \"arName\":\r\n            {\r\n            \"arFName\": \"Arabic First Name ????? ????? ??????\",\r\n            \"arSName\": \"Arabic Second Name ????? ????? ??????\",\r\n            \"arTName\": \"Arabic Third Name\",\r\n            \"arLName\": \"Arabic Last Name\"\r\n            }\r\n        }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "https://10.150.211.229:8444/api/v1/tmsx-cas/customers",
+					"protocol": "https",
+					"host": [
+						"10",
+						"150",
+						"211",
+						"229"
+					],
+					"port": "8444",
+					"path": [
+						"api",
+						"v1",
+						"tmsx-cas",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CBS-GetCustomerAndAccounts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key 81263d33-0343-49bc-bb84-51a265996e35"
+					},
+					{
+						"key": "clientId",
+						"value": "afs"
+					}
+				],
+				"url": {
+					"raw": "https://10.150.211.229:8444/api/v1/cbs/customers?uidType=NID&uidValue=9762041980&unit=JOR",
+					"protocol": "https",
+					"host": [
+						"10",
+						"150",
+						"211",
+						"229"
+					],
+					"port": "8444",
+					"path": [
+						"api",
+						"v1",
+						"cbs",
+						"customers"
+					],
+					"query": [
+						{
+							"key": "uidType",
+							"value": "NID"
+						},
+						{
+							"key": "uidValue",
+							"value": "9762041980"
+						},
+						{
+							"key": "unit",
+							"value": "JOR"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAS-CreateAccount",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key 81263d33-0343-49bc-bb84-51a265996e35"
+					},
+					{
+						"key": "clientId",
+						"value": "afs"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": {\"IBAN\": \"JO24ABCJ0001000839360929010010\"},\r\n\"type\": \"DFLT\",\r\n\"servicer\": {\"bic\": \"ABCJJOA0\"},\r\n\"openingDate\": \"2017-11-23\",\r\n\"closingDate\": \"2022-12-20\",\r\n\"currency\": \"JOD\"\r\n}"
+				},
+				"url": {
+					"raw": "https://10.150.211.229:8444/api/v1/tmsx-cas/customers/3423/accounts",
+					"protocol": "https",
+					"host": [
+						"10",
+						"150",
+						"211",
+						"229"
+					],
+					"port": "8444",
+					"path": [
+						"api",
+						"v1",
+						"tmsx-cas",
+						"customers",
+						"3423",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAS-GetAccount",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key 81263d33-0343-49bc-bb84-51a265996e35"
+					},
+					{
+						"key": "clientId",
+						"value": "afs"
+					}
+				],
+				"url": {
+					"raw": "https://10.150.211.229:8444/api/v1/tmsx-cas/customers/3423/accounts?unit=JOR&country=JO",
+					"protocol": "https",
+					"host": [
+						"10",
+						"150",
+						"211",
+						"229"
+					],
+					"port": "8444",
+					"path": [
+						"api",
+						"v1",
+						"tmsx-cas",
+						"customers",
+						"3423",
+						"accounts"
+					],
+					"query": [
+						{
+							"key": "unit",
+							"value": "JOR"
+						},
+						{
+							"key": "country",
+							"value": "JO"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAS-CreateAlias",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key 81263d33-0343-49bc-bb84-51a265996e35"
+					},
+					{
+						"key": "clientId",
+						"value": "afs"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"type\": \"MOBL\",\r\n\"value\": \"00919727844185\",\r\n\"startDate\": \"2017-10-15\",\r\n\"expirationDate\": \"2025-03-22\",\r\n\"status\": \"active\"\r\n}"
+				},
+				"url": {
+					"raw": "https://10.150.211.229:8444/api/v1/tmsx-cas/customers/3423/aliases?unit=JOR&country=JO",
+					"protocol": "https",
+					"host": [
+						"10",
+						"150",
+						"211",
+						"229"
+					],
+					"port": "8444",
+					"path": [
+						"api",
+						"v1",
+						"tmsx-cas",
+						"customers",
+						"3423",
+						"aliases"
+					],
+					"query": [
+						{
+							"key": "unit",
+							"value": "JOR"
+						},
+						{
+							"key": "country",
+							"value": "JO"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAS-GetCustomerAlias",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key 81263d33-0343-49bc-bb84-51a265996e35"
+					},
+					{
+						"key": "clientId",
+						"value": "afs"
+					}
+				],
+				"url": {
+					"raw": "https://10.150.211.229:8444/api/v1/tmsx-cas/customers/3423/aliases",
+					"protocol": "https",
+					"host": [
+						"10",
+						"150",
+						"211",
+						"229"
+					],
+					"port": "8444",
+					"path": [
+						"api",
+						"v1",
+						"tmsx-cas",
+						"customers",
+						"3423",
+						"aliases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAS-LinkAccountToAlias",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key 81263d33-0343-49bc-bb84-51a265996e35"
+					},
+					{
+						"key": "clientId",
+						"value": "afs"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"type\": \"MOBL\",\r\n \"value\": \"00919909900332\",\r\n  \"isDefault\": true\r\n}"
+				},
+				"url": {
+					"raw": "https://10.150.211.229:8444/api/v1/tmsx-cas/accounts/3986/aliases?unit=JOR&country=JO",
+					"protocol": "https",
+					"host": [
+						"10",
+						"150",
+						"211",
+						"229"
+					],
+					"port": "8444",
+					"path": [
+						"api",
+						"v1",
+						"tmsx-cas",
+						"accounts",
+						"3986",
+						"aliases"
+					],
+					"query": [
+						{
+							"key": "unit",
+							"value": "JOR"
+						},
+						{
+							"key": "country",
+							"value": "JO"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAS-ActivateAlias",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key 81263d33-0343-49bc-bb84-51a265996e35"
+					},
+					{
+						"key": "clientId",
+						"value": "afs"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://10.150.211.229:8444/api/v1/tmsx-cas/aliases/7016/activate?unit=JOR&country=JO",
+					"protocol": "https",
+					"host": [
+						"10",
+						"150",
+						"211",
+						"229"
+					],
+					"port": "8444",
+					"path": [
+						"api",
+						"v1",
+						"tmsx-cas",
+						"aliases",
+						"7016",
+						"activate"
+					],
+					"query": [
+						{
+							"key": "unit",
+							"value": "JOR"
+						},
+						{
+							"key": "country",
+							"value": "JO"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAS-SuspendAlias",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "api-key 81263d33-0343-49bc-bb84-51a265996e35",
+						"type": "text"
+					},
+					{
+						"key": "clientId",
+						"value": "afs",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://10.150.211.229:8444/api/v1/tmsx-cas/aliases/7016/suspend?unit=JOR&country=JO",
+					"protocol": "https",
+					"host": [
+						"10",
+						"150",
+						"211",
+						"229"
+					],
+					"port": "8444",
+					"path": [
+						"api",
+						"v1",
+						"tmsx-cas",
+						"aliases",
+						"7016",
+						"suspend"
+					],
+					"query": [
+						{
+							"key": "unit",
+							"value": "JOR"
+						},
+						{
+							"key": "country",
+							"value": "JO"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAS-DeleteAlias",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key 81263d33-0343-49bc-bb84-51a265996e35"
+					},
+					{
+						"key": "clientId",
+						"value": "afs"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://10.150.211.229:8444/api/v1/tmsx-cas/aliases/7016?unit=JOR&country=JO",
+					"protocol": "https",
+					"host": [
+						"10",
+						"150",
+						"211",
+						"229"
+					],
+					"port": "8444",
+					"path": [
+						"api",
+						"v1",
+						"tmsx-cas",
+						"aliases",
+						"7016"
+					],
+					"query": [
+						{
+							"key": "unit",
+							"value": "JOR"
+						},
+						{
+							"key": "country",
+							"value": "JO"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAS-UpdateAlias",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key 81263d33-0343-49bc-bb84-51a265996e35"
+					},
+					{
+						"key": "clientId",
+						"value": "afs"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"type\": \"MOBL\",\r\n\"value\": \"00919909900332\",\r\n\"startDate\": \"2017-10-15\",\r\n\"expirationDate\": \"2025-03-22\"\r\n}"
+				},
+				"url": {
+					"raw": "https://10.150.211.229:8444/api/v1/tmsx-cas/aliases/7048?unit=JOR&country=JO",
+					"protocol": "https",
+					"host": [
+						"10",
+						"150",
+						"211",
+						"229"
+					],
+					"port": "8444",
+					"path": [
+						"api",
+						"v1",
+						"tmsx-cas",
+						"aliases",
+						"7048"
+					],
+					"query": [
+						{
+							"key": "unit",
+							"value": "JOR"
+						},
+						{
+							"key": "country",
+							"value": "JO"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAS-UnlinkAccountFromAlias",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key 81263d33-0343-49bc-bb84-51a265996e35"
+					},
+					{
+						"key": "clientId",
+						"value": "afs"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://10.150.211.229:8444/api/v1/tmsx-cas/accounts/3986/aliases/7049",
+					"protocol": "https",
+					"host": [
+						"10",
+						"150",
+						"211",
+						"229"
+					],
+					"port": "8444",
+					"path": [
+						"api",
+						"v1",
+						"tmsx-cas",
+						"accounts",
+						"3986",
+						"aliases",
+						"7049"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CBS-GetCustomers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key 81263d33-0343-49bc-bb84-51a265996e35"
+					},
+					{
+						"key": "clientId",
+						"value": "afs"
+					}
+				],
+				"url": {
+					"raw": "https://10.150.211.229:8444/api/v1/cbs/customers?uidType=NID&uidValue=9762041980&unit=JOR",
+					"protocol": "https",
+					"host": [
+						"10",
+						"150",
+						"211",
+						"229"
+					],
+					"port": "8444",
+					"path": [
+						"api",
+						"v1",
+						"cbs",
+						"customers"
+					],
+					"query": [
+						{
+							"key": "uidType",
+							"value": "NID"
+						},
+						{
+							"key": "uidValue",
+							"value": "9762041980"
+						},
+						{
+							"key": "unit",
+							"value": "JOR"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAS-GetAccountByAlias",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key 81263d33-0343-49bc-bb84-51a265996e35"
+					},
+					{
+						"key": "clientId",
+						"value": "afs"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://10.150.211.229:8444/api/v1/tmsx-cas/account?aliasType=MOBL&aliasValue=00919909900332",
+					"protocol": "https",
+					"host": [
+						"10",
+						"150",
+						"211",
+						"229"
+					],
+					"port": "8444",
+					"path": [
+						"api",
+						"v1",
+						"tmsx-cas",
+						"account"
+					],
+					"query": [
+						{
+							"key": "aliasType",
+							"value": "MOBL"
+						},
+						{
+							"key": "aliasValue",
+							"value": "00919909900332"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
