@@ -1,0 +1,35 @@
+{
+"requestIdentification":
+
+{   "endToEndId": "65837b100c6748399e5bs4645bfbf3588" }
+,
+"transactionTypeCode": "11110",
+"instructedAmount":
+
+{   "currency": "JOD",   "value": "1" }
+,
+"debtor": {
+"account":
+
+{ "IBAN": "JO42ABCJ0001000179950929010016"   }
+,
+  "name": "مصطفى",
+  "address": "المنامه البحرين/شارع
+رقم 4723 رقم الشقه847"
+},
+"debtorAgent":
+
+{ "bic": "ABCJJOA0" }
+,
+ "creditor": {
+"account":
+
+{   "IBAN": "JO74ABCJ0001000161740929010011"   }
+,
+"name": "عثمان",
+  "address": "عمان-شفا بدران "
+},
+"creditorAgent":
+
+{   "bic": "ABCJJOA0" }
+}
