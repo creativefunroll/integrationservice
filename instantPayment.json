@@ -1,0 +1,38 @@
+{
+  "paymentIdentification" : {
+    "endToEndId" : "e420da9db0e54fffa375ef901252a75d"
+  },
+  "transactionTypeCode" : "11110",
+  "instructedAmount" : {
+    "currency" : "JOD",
+    "value" : "6"
+  },
+  "debtor" : {
+    "account" : {
+      "iban" : "JO37ABCJ0003000630860901010012",
+      "IBAN" : "JO37ABCJ0003000630860901010012"
+    },
+    "isPrivate" : true,
+    "name" : "MOHAMAD",
+    "address" : "AMMAN JO "
+  },
+  "debtorAgent" : {
+    "bic" : "ABCJJOA0"
+  },
+  "creditor" : {
+    "account" : {
+      "iban" : "JO93BJOR0010000013010050900005",
+      "IBAN" : "JO93BJOR0010000013010050900005"
+    },
+    "isPrivate" : false,
+    "name" : "Customer",
+    "address" : "AMMAN",
+    "alias" : {
+      "type" : "ALIAS",
+      "value" : "aref"
+    }
+  },
+  "creditorAgent" : {
+    "bic" : "BJORJOA0"
+  }
+}

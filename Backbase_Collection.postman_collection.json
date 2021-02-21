@@ -1,0 +1,3017 @@
+{
+	"info": {
+		"_postman_id": "eb5d99e5-095a-4709-a0bd-29d50ee618ef",
+		"name": "Backbase_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:7777/portalserver/services/rest/v1/cas/customers?country=JOR&uidType=NID&uidValue=123456",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"type": "text",
+						"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=j5tvngfblyzm1073nakprtlym; userLanguage=en-US; BBXSRF=94eab84c-157f-4d20-99b8-1d9994ba5d13"
+					},
+					{
+						"key": "BBXSRF",
+						"type": "text",
+						"value": "94eab84c-157f-4d20-99b8-1d9994ba5d13"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/customers?country=JOR&uidType=NID&uidValue=123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"portalserver",
+						"services",
+						"rest",
+						"v1",
+						"cas",
+						"customers"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "JOR"
+						},
+						{
+							"key": "uidType",
+							"value": "NID"
+						},
+						{
+							"key": "uidValue",
+							"value": "123456"
+						}
+					]
+				},
+				"description": "Get Customer"
+			},
+			"response": [
+				{
+					"name": "http://localhost:7777/portalserver/services/rest/v1/cas/customers?country=JOR&uidType=NID&uidValue=123456",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Cookie",
+								"type": "text",
+								"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=j5tvngfblyzm1073nakprtlym; userLanguage=en-US; BBXSRF=94eab84c-157f-4d20-99b8-1d9994ba5d13"
+							},
+							{
+								"key": "BBXSRF",
+								"type": "text",
+								"value": "94eab84c-157f-4d20-99b8-1d9994ba5d13"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/customers?country=JOR&uidType=NID&uidValue=123456",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"portalserver",
+								"services",
+								"rest",
+								"v1",
+								"cas",
+								"customers"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "JOR"
+								},
+								{
+									"key": "uidType",
+									"value": "NID"
+								},
+								{
+									"key": "uidValue",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BBXSRF=94eab84c-157f-4d20-99b8-1d9994ba5d13;Path=/;Expires=Mon, 25-Jan-2021 18:55:28 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "X-BBXSRF",
+							"value": "94eab84c-157f-4d20-99b8-1d9994ba5d13"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.17.v20160517)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": \"IS-CAS-1013\",\n        \"message\": \"Customer details retrived successfully.\"\n    },\n    \"data\": {\n        \"uid\": {\n            \"type\": \"TPASS\",\n            \"value\": \"N939003\"\n        },\n        \"documentValidityDate\": \"2030-01-25\",\n        \"resident\": true,\n        \"name\": \"John\",\n        \"surname\": \"Doe\",\n        \"nickName\": \"eddie\",\n        \"gender\": \"MALE\",\n        \"birthDate\": \"1985-01-25\",\n        \"placeOfBirth\": \"country, city\",\n        \"address\": {\n            \"country\": \"IN\",\n            \"city\": \"CityName\",\n            \"stateProvinceRegion\": \"Region Name\",\n            \"address\": \"street, building No.\"\n        },\n        \"additionalDetailsPrivate\": {\n            \"additionalIndividualDetailsPrivate\": {\n                \"nationality\": \"BH\",\n                \"opendate\": \"1990-01-25\"\n            }\n        },\n        \"additionalDetails\": {\n            \"additionalIndividualDetails\": {\n                \"customerType\": \"Individual\",\n                \"engName\": {\n                    \"enSName\": \"SecondName\",\n                    \"enTName\": \"ThirdName\"\n                },\n                \"arName\": {\n                    \"legalArName\": {\n                        \"arFullName\": \"Full Name\",\n                        \"arTradeName\": \"Arabic Trade Name\"\n                    }\n                }\n            }\n        },\n        \"recordId\": \"123456\",\n        \"status\": \"active\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7777/portalserver/services/rest/v1/cas/account?country=JOR&aliasType=name\n&aliasValue=value",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=j5tvngfblyzm1073nakprtlym; userLanguage=en-US; BBXSRF=94eab84c-157f-4d20-99b8-1d9994ba5d13",
+						"type": "text"
+					},
+					{
+						"key": "BBXSRF",
+						"value": "94eab84c-157f-4d20-99b8-1d9994ba5d13",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/account?country=JOR&aliasType=aliastype\n&aliasValue=value",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"portalserver",
+						"services",
+						"rest",
+						"v1",
+						"cas",
+						"account"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "JOR"
+						},
+						{
+							"key": "aliasType",
+							"value": "aliastype\n"
+						},
+						{
+							"key": "aliasValue",
+							"value": "value"
+						}
+					]
+				},
+				"description": "Get Account By Alias"
+			},
+			"response": [
+				{
+					"name": "http://localhost:7777/portalserver/services/rest/v1/cas/account?country=JOR&aliasType=name\n&aliasValue=value",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=j5tvngfblyzm1073nakprtlym; userLanguage=en-US; BBXSRF=94eab84c-157f-4d20-99b8-1d9994ba5d13",
+								"type": "text"
+							},
+							{
+								"key": "BBXSRF",
+								"value": "94eab84c-157f-4d20-99b8-1d9994ba5d13",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/account?country=JOR&aliasType=name\n&aliasValue=value",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"portalserver",
+								"services",
+								"rest",
+								"v1",
+								"cas",
+								"account"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "JOR"
+								},
+								{
+									"key": "aliasType",
+									"value": "name\n"
+								},
+								{
+									"key": "aliasValue",
+									"value": "value"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BBXSRF=94eab84c-157f-4d20-99b8-1d9994ba5d13;Path=/;Expires=Mon, 25-Jan-2021 18:55:31 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "X-BBXSRF",
+							"value": "94eab84c-157f-4d20-99b8-1d9994ba5d13"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.17.v20160517)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": \"IS-CAS-1011\",\n        \"message\": \"Account details retrieved successfully.\"\n    },\n    \"data\": {\n        \"id\": {\n            \"IBAN\": \"JO42ABCJ0000000000233085564510\"\n        },\n        \"servicer\": {\n            \"bic\": \"ABCJJOA0\"\n        },\n        \"currency\": \"BHD\",\n        \"type\": \"DLFT\",\n        \"name\": \"John\",\n        \"surname\": \"Doe\",\n        \"nickName\": \"eddie\",\n        \"address\": {\n            \"country\": \"IN\",\n            \"city\": \"CityName\",\n            \"stateProvinceRegion\": \"Region Name\",\n            \"address\": \"street, building No.\"\n        },\n        \"isDefault\": true,\n        \"additionalDetails\": {\n            \"additionalIndividualDetails\": {\n                \"customerType\": \"Individual\",\n                \"engName\": {\n                    \"enSName\": \"SecondName\",\n                    \"enTName\": \"ThirdName\"\n                },\n                \"arName\": {\n                    \"legalArName\": {\n                        \"arFullName\": \"Full Name\",\n                        \"arTradeName\": \"Arabic Trade Name\"\n                    }\n                }\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/accounts?\ncountry=JOR",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=j5tvngfblyzm1073nakprtlym; userLanguage=en-US; BBXSRF=94eab84c-157f-4d20-99b8-1d9994ba5d13",
+						"type": "text"
+					},
+					{
+						"key": "BBXSRF",
+						"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/accounts?\ncountry=JOR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"portalserver",
+						"services",
+						"rest",
+						"v1",
+						"cas",
+						"customers",
+						"1",
+						"accounts"
+					],
+					"query": [
+						{
+							"key": "\ncountry",
+							"value": "JOR"
+						}
+					]
+				},
+				"description": "GetAccountById\nhttp://localhost:7777/portalserver/services/rest/v1/cas/customers/{id}/accounts?country=<countrycode>"
+			},
+			"response": [
+				{
+					"name": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/accounts?\ncountry=JOR",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=j5tvngfblyzm1073nakprtlym; userLanguage=en-US; BBXSRF=94eab84c-157f-4d20-99b8-1d9994ba5d13",
+								"type": "text"
+							},
+							{
+								"key": "BBXSRF",
+								"value": "94eab84c-157f-4d20-99b8-1d9994ba5d13",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/accounts?\ncountry=JOR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"portalserver",
+								"services",
+								"rest",
+								"v1",
+								"cas",
+								"customers",
+								"1",
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "\ncountry",
+									"value": "JOR"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BBXSRF=94eab84c-157f-4d20-99b8-1d9994ba5d13;Path=/;Expires=Mon, 25-Jan-2021 18:55:35 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "X-BBXSRF",
+							"value": "94eab84c-157f-4d20-99b8-1d9994ba5d13"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.17.v20160517)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": \"IS-CAS-1012\",\n        \"message\": \"Customer Accounts retrieved successfully.\"\n    },\n    \"data\": {\n        \"accounts\": [\n            {\n                \"id\": {\n                    \"IBAN\": \"JO42ABCJ0000000000233085564510\"\n                },\n                \"servicer\": {\n                    \"bic\": \"ABCJJOA0\"\n                },\n                \"currency\": \"BHD\",\n                \"type\": \"DLFT\",\n                \"openingDate\": \"1985-01-25\",\n                \"closingDate\": \"2020-01-25\",\n                \"recordId\": \"cw03qdAW\"\n            }\n        ]\n    }\n}"
+				},
+				{
+					"name": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/accounts?\ncountry=JOR",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=j5tvngfblyzm1073nakprtlym; userLanguage=en-US; BBXSRF=94eab84c-157f-4d20-99b8-1d9994ba5d13",
+								"type": "text"
+							},
+							{
+								"key": "BBXSRF",
+								"value": "94eab84c-157f-4d20-99b8-1d9994ba5d13",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/accounts?\ncountry=JOR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"portalserver",
+								"services",
+								"rest",
+								"v1",
+								"cas",
+								"customers",
+								"1",
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "\ncountry",
+									"value": "JOR"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BBXSRF=94eab84c-157f-4d20-99b8-1d9994ba5d13;Path=/;Expires=Mon, 25-Jan-2021 18:55:35 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "X-BBXSRF",
+							"value": "94eab84c-157f-4d20-99b8-1d9994ba5d13"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.17.v20160517)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": \"IS-CAS-1012\",\n        \"message\": \"Customer Accounts retrieved successfully.\"\n    },\n    \"data\": {\n        \"accounts\": [\n            {\n                \"id\": {\n                    \"IBAN\": \"JO42ABCJ0000000000233085564510\"\n                },\n                \"servicer\": {\n                    \"bic\": \"ABCJJOA0\"\n                },\n                \"currency\": \"BHD\",\n                \"type\": \"DLFT\",\n                \"openingDate\": \"1985-01-25\",\n                \"closingDate\": \"2020-01-25\",\n                \"recordId\": \"cw03qdAW\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7777/portalserver/services/rest/v1/cas/accounts/1/aliases?country=JOR",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					},
+					{
+						"key": "BBXSRF",
+						"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/accounts/1/aliases?country=JOR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"portalserver",
+						"services",
+						"rest",
+						"v1",
+						"cas",
+						"accounts",
+						"1",
+						"aliases"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "JOR"
+						}
+					]
+				},
+				"description": "Get Aliases of the account by accountid\n\nhttp://localhost:7777/portalserver/services/rest/v1/cas/accounts/1/aliases?country=<countrycode>"
+			},
+			"response": [
+				{
+					"name": "http://localhost:7777/portalserver/services/rest/v1/cas/accounts/1/aliases?country=JOR",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							},
+							{
+								"key": "BBXSRF",
+								"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/accounts/1/aliases?country=JOR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"portalserver",
+								"services",
+								"rest",
+								"v1",
+								"cas",
+								"accounts",
+								"1",
+								"aliases"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "JOR"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e;Path=/;Expires=Tue, 26-Jan-2021 04:19:32 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "X-BBXSRF",
+							"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.17.v20160517)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": \"IS-CAS-1010\",\n        \"message\": \"Account aliases retrived succesfully.\"\n    },\n    \"data\": {\n        \"aliases\": [\n            {\n                \"type\": \"MOBILENUMBER\",\n                \"value\": \"+917777777777\",\n                \"status\": \"active\",\n                \"startDate\": \"2020-01-25\",\n                \"expirationDate\": \"2020-01-25\",\n                \"recordId\": \"cw03qdAW\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7777/portalserver/services/rest/v1/cbs/customers?country=JOR\n&uidType=123&uidValue=456",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					},
+					{
+						"key": "BBXSRF",
+						"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:7777/portalserver/services/rest/v1/cbs/customers?country=JOR\n&uidType=123&uidValue=456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"portalserver",
+						"services",
+						"rest",
+						"v1",
+						"cbs",
+						"customers"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "JOR\n"
+						},
+						{
+							"key": "uidType",
+							"value": "123"
+						},
+						{
+							"key": "uidValue",
+							"value": "456"
+						}
+					]
+				},
+				"description": "Get CBS customer details"
+			},
+			"response": [
+				{
+					"name": "http://localhost:7777/portalserver/services/rest/v1/cbs/customers?country=JOR\n&uidType=123&uidValue=456",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							},
+							{
+								"key": "BBXSRF",
+								"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/portalserver/services/rest/v1/cbs/customers?country=JOR\n&uidType=123&uidValue=456",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"portalserver",
+								"services",
+								"rest",
+								"v1",
+								"cbs",
+								"customers"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "JOR\n"
+								},
+								{
+									"key": "uidType",
+									"value": "123"
+								},
+								{
+									"key": "uidValue",
+									"value": "456"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e;Path=/;Expires=Tue, 26-Jan-2021 04:19:45 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "X-BBXSRF",
+							"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.17.v20160517)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": \"IS-1\",\n        \"message\": \"description\"\n    },\n    \"data\": {\n        \"uid\": {\n            \"type\": \"TPASS\",\n            \"value\": \"N939003\"\n        },\n        \"accounts\": [\n            {\n                \"bic\": \"Jordan\",\n                \"accountNumber\": \"123456\",\n                \"type\": \"DLFT\",\n                \"category\": \"Savings\",\n                \"currency\": \"JOR\",\n                \"availableBalance\": 850.5,\n                \"nickName\": \"Nick Name\"\n            }\n        ],\n        \"cbsClientNo\": \"123456\",\n        \"kycIdValidityDate\": \"2020-01-25\",\n        \"resident\": true,\n        \"gender\": \"Male\",\n        \"birthDate\": \"2020-01-25\",\n        \"placeOfBirth\": \"country, city\",\n        \"address\": {\n            \"country\": \"IN\",\n            \"city\": \"CityName\",\n            \"stateProvinceRegion\": \"Region Name\",\n            \"address\": \"street, building No.\"\n        },\n        \"nationality\": \"BH\",\n        \"mobileNumber\": \"+8851234567\",\n        \"email\": \"something@abc.com\",\n        \"onboardingDate\": \"2020-01-25\",\n        \"name\": \"John\",\n        \"surname\": \"Doe\",\n        \"additionalDetails\": {\n            \"customerType\": \"Individual\",\n            \"engName\": {\n                \"enSName\": \"SecondName\",\n                \"enTName\": \"ThirdName\"\n            },\n            \"arName\": {\n                \"individualArName\": {\n                    \"arFName\": \"FirstName\",\n                    \"arSName\": \"SecondName\",\n                    \"arTName\": \"ThirdName\",\n                    \"arLName\": \"LastName\"\n                }\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7777/portalserver/services/rest/v1/cas/aliases/1/activate?country=JOR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					},
+					{
+						"key": "X-BBXSRF",
+						"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/aliases/1/activate?country=JOR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"portalserver",
+						"services",
+						"rest",
+						"v1",
+						"cas",
+						"aliases",
+						"1",
+						"activate"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "JOR"
+						}
+					]
+				},
+				"description": "Activate Alias\n\nhttp://localhost:7777/portalserver/services/rest/v1/cas/aliases/{id}/activate?country=<Countrycode>"
+			},
+			"response": [
+				{
+					"name": "http://localhost:7777/portalserver/services/rest/v1/cas/aliases/1/activate?country=JOR",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							},
+							{
+								"key": "X-BBXSRF",
+								"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/aliases/1/activate?country=JOR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"portalserver",
+								"services",
+								"rest",
+								"v1",
+								"cas",
+								"aliases",
+								"1",
+								"activate"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "JOR"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e;Path=/;Expires=Tue, 26-Jan-2021 04:19:51 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "X-BBXSRF",
+							"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.17.v20160517)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": \"IS-CAS-1005\",\n        \"message\": \"Alias activated successfully.\"\n    },\n    \"data\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": " http://localhost:7777/portalserver/services/rest/v1/cas/aliases/1/suspend?country=JOR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					},
+					{
+						"key": "X-BBXSRF",
+						"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/aliases/1/suspend?country=JOR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"portalserver",
+						"services",
+						"rest",
+						"v1",
+						"cas",
+						"aliases",
+						"1",
+						"suspend"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "JOR"
+						}
+					]
+				},
+				"description": "Suspend Alias\n http://localhost:7777/portalserver/services/rest/v1/cas/aliases/{id}/suspend?country=<countrycode>"
+			},
+			"response": [
+				{
+					"name": " http://localhost:7777/portalserver/services/rest/v1/cas/aliases/1/suspend?country=JOR",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							},
+							{
+								"key": "X-BBXSRF",
+								"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/aliases/1/suspend?country=JOR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"portalserver",
+								"services",
+								"rest",
+								"v1",
+								"cas",
+								"aliases",
+								"1",
+								"suspend"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "JOR"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e;Path=/;Expires=Tue, 26-Jan-2021 04:19:59 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "X-BBXSRF",
+							"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.17.v20160517)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": \"IS-CAS-1006\",\n        \"message\": \"Alias suspend request sent.\"\n    },\n    \"data\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": " http://localhost:7777/portalserver/services/rest/v1/cas/aliases/1?country=JOR",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					},
+					{
+						"key": "X-BBXSRF",
+						"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/aliases/1?country=JOR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"portalserver",
+						"services",
+						"rest",
+						"v1",
+						"cas",
+						"aliases",
+						"1"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "JOR"
+						}
+					]
+				},
+				"description": "Delete Alias\n http://localhost:7777/portalserver/services/rest/v1/cas/aliases/{id}?country=<countrycode>"
+			},
+			"response": [
+				{
+					"name": " http://localhost:7777/portalserver/services/rest/v1/cas/aliases/1?country=JOR",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							},
+							{
+								"key": "X-BBXSRF",
+								"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/aliases/1?country=JOR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"portalserver",
+								"services",
+								"rest",
+								"v1",
+								"cas",
+								"aliases",
+								"1"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "JOR"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e;Path=/;Expires=Tue, 26-Jan-2021 04:20:06 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "X-BBXSRF",
+							"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.17.v20160517)"
+						}
+					],
+					"cookie": [],
+					"body": "null"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/activate?country=JOR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					},
+					{
+						"key": "X-BBXSRF",
+						"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/activate?country=JOR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"portalserver",
+						"services",
+						"rest",
+						"v1",
+						"cas",
+						"customers",
+						"1",
+						"activate"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "JOR"
+						}
+					]
+				},
+				"description": "Activate Customer\nhttp://localhost:7777/portalserver/services/rest/v1/cas/customers/{id}/activate?country=<countrycode>"
+			},
+			"response": [
+				{
+					"name": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/activate?country=JOR",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							},
+							{
+								"key": "X-BBXSRF",
+								"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/activate?country=JOR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"portalserver",
+								"services",
+								"rest",
+								"v1",
+								"cas",
+								"customers",
+								"1",
+								"activate"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "JOR"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e;Path=/;Expires=Tue, 26-Jan-2021 04:20:13 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "X-BBXSRF",
+							"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.17.v20160517)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": \"IS-CAS-1004\",\n        \"message\": \"Customer activated successfully.\"\n    },\n    \"data\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/suspend?country=JOR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					},
+					{
+						"key": "X-BBXSRF",
+						"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/suspend?country=JOR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"portalserver",
+						"services",
+						"rest",
+						"v1",
+						"cas",
+						"customers",
+						"1",
+						"suspend"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "JOR"
+						}
+					]
+				},
+				"description": "Suspend Customer\nhttp://localhost:7777/portalserver/services/rest/v1/cas/customers/{id}/suspend?country=<countrycode>"
+			},
+			"response": [
+				{
+					"name": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/suspend?country=JOR",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							},
+							{
+								"key": "X-BBXSRF",
+								"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/suspend?country=JOR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"portalserver",
+								"services",
+								"rest",
+								"v1",
+								"cas",
+								"customers",
+								"1",
+								"suspend"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "JOR"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e;Path=/;Expires=Tue, 26-Jan-2021 04:20:24 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "X-BBXSRF",
+							"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.17.v20160517)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": \"IS-CAS-1007\",\n        \"message\": \"Customer suspend request sent.\"\n    },\n    \"data\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7777/portalserver/services/rest/v1/cas/accounts/1/aliases/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					},
+					{
+						"key": "X-BBXSRF",
+						"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/accounts/1/aliases/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"portalserver",
+						"services",
+						"rest",
+						"v1",
+						"cas",
+						"accounts",
+						"1",
+						"aliases",
+						"1"
+					]
+				},
+				"description": "Unlink Account From Alias\nhttp://localhost:7777/portalserver/services/rest/v1/cas/accounts/{accountId}/aliases/{aliasId}"
+			},
+			"response": [
+				{
+					"name": "http://localhost:7777/portalserver/services/rest/v1/cas/accounts/1/aliases/1",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							},
+							{
+								"key": "X-BBXSRF",
+								"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/accounts/1/aliases/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"portalserver",
+								"services",
+								"rest",
+								"v1",
+								"cas",
+								"accounts",
+								"1",
+								"aliases",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e;Path=/;Expires=Tue, 26-Jan-2021 04:20:36 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "X-BBXSRF",
+							"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.17.v20160517)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": \"IS-CAS-1008\",\n        \"message\": \"Unlinked account from alias.\"\n    },\n    \"data\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1?country=JOR",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					},
+					{
+						"key": "X-BBXSRF",
+						"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1?country=JOR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"portalserver",
+						"services",
+						"rest",
+						"v1",
+						"cas",
+						"customers",
+						"1"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "JOR"
+						}
+					]
+				},
+				"description": "Delete Customer\nhttp://localhost:7777/portalserver/services/rest/v1/cas/customers/{id}?country=<countrycode>"
+			},
+			"response": [
+				{
+					"name": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1?country=JOR",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							},
+							{
+								"key": "X-BBXSRF",
+								"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1?country=JOR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"portalserver",
+								"services",
+								"rest",
+								"v1",
+								"cas",
+								"customers",
+								"1"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "JOR"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e;Path=/;Expires=Tue, 26-Jan-2021 04:20:41 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "X-BBXSRF",
+							"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.17.v20160517)"
+						}
+					],
+					"cookie": [],
+					"body": "null"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/aliases?country=JOR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					},
+					{
+						"key": "X-BBXSRF",
+						"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"type\": \"MOBILENUMBER\",\n  \"value\": \"+917777777777\",\n  \"status\": \"active\",\n  \"startDate\": \"2020-01-25\",\n  \"expirationDate\": \"2020-01-25\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/aliases?country=JOR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"portalserver",
+						"services",
+						"rest",
+						"v1",
+						"cas",
+						"customers",
+						"1",
+						"aliases"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "JOR"
+						}
+					]
+				},
+				"description": "Create Alias\nhttp://localhost:7777/portalserver/services/rest/v1/cas/customers/{id}/aliases?country=<countrycode>"
+			},
+			"response": [
+				{
+					"name": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/aliases?country=JOR",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							},
+							{
+								"key": "X-BBXSRF",
+								"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"type\": \"MOBILENUMBER\",\n  \"value\": \"+917777777777\",\n  \"status\": \"active\",\n  \"startDate\": \"2020-01-25\",\n  \"expirationDate\": \"2020-01-25\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/aliases?country=JOR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"portalserver",
+								"services",
+								"rest",
+								"v1",
+								"cas",
+								"customers",
+								"1",
+								"aliases"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "JOR"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e;Path=/;Expires=Tue, 26-Jan-2021 04:20:51 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "X-BBXSRF",
+							"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.17.v20160517)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": \"IS-CAS-1002\",\n        \"message\": \"Alias created successfully.\"\n    },\n    \"data\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7777/portalserver/services/rest/v1/cas/customers?country=JOR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					},
+					{
+						"key": "X-BBXSRF",
+						"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"uid\": {\n    \"type\": \"TPASS\",\n    \"value\": \"N939003\"\n  },\n  \"documentValidityDate\": \"2020-01-25\",\n  \"resident\": \"true\",\n  \"name\": \"John\",\n  \"surname\": \"Doe\",\n  \"nickName\": \"eddie\",\n  \"gender\": \"MALE\",\n  \"birthDate\": \"2020-01-25\",\n  \"placeOfBirth\": \"country, city\",\n  \"address\": {\n    \"country\": \"IN\",\n    \"city\": \"CityName\",\n    \"stateProvinceRegion\": \"Region Name\",\n    \"address\": \"street, building No.\"\n  },\n  \"additionalDetailsPrivate\": {\n   \"additionalLegalDetailsPrivate\": {\n    \"taxno\": \"value1\",\n    \"estdate\": \"2020-01-25\",\n    \"sid\": {\n      \"type\": \"TPASS\",\n      \"value\": \"N939003\"\n    }\n  }     \n  }\n ,\n \"additionalDetails\": {\n\n      \"additionalLegalDetails\": {\n    \"customerType\": \"Company\",\n    \"engName\": {\n      \"enSName\": \"SecondName\",\n      \"enTName\": \"ThirdName\"\n    },\n    \"arName\": {\n      \"arFName\": \"FirstName\",\n      \"arSName\": \"SecondName\",\n      \"arTName\": \"ThirdName\",\n      \"arLName\": \"LastName\",\n      \"arFullName\": \"Full Name\",\n      \"arTradeName\": \"Arabic Trade Name\"\n    },\n    \"engTradeName\": \"SAMCO\"\n  }\n }\n\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/customers?country=JOR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"portalserver",
+						"services",
+						"rest",
+						"v1",
+						"cas",
+						"customers"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "JOR"
+						}
+					]
+				},
+				"description": "Create Customer -Legal"
+			},
+			"response": [
+				{
+					"name": "http://localhost:7777/portalserver/services/rest/v1/cas/customers?country=JOR",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							},
+							{
+								"key": "X-BBXSRF",
+								"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"uid\": {\n    \"type\": \"TPASS\",\n    \"value\": \"N939003\"\n  },\n  \"documentValidityDate\": \"2020-01-25\",\n  \"resident\": \"true\",\n  \"name\": \"John\",\n  \"surname\": \"Doe\",\n  \"nickName\": \"eddie\",\n  \"gender\": \"MALE\",\n  \"birthDate\": \"2020-01-25\",\n  \"placeOfBirth\": \"country, city\",\n  \"address\": {\n    \"country\": \"IN\",\n    \"city\": \"CityName\",\n    \"stateProvinceRegion\": \"Region Name\",\n    \"address\": \"street, building No.\"\n  },\n  \"additionalDetailsPrivate\": {\n   \"additionalLegalDetailsPrivate\": {\n    \"taxno\": \"value1\",\n    \"estdate\": \"2020-01-25\",\n    \"sid\": {\n      \"type\": \"TPASS\",\n      \"value\": \"N939003\"\n    }\n  }     \n  }\n ,\n \"additionalDetails\": {\n\n      \"additionalLegalDetails\": {\n    \"customerType\": \"Company\",\n    \"engName\": {\n      \"enSName\": \"SecondName\",\n      \"enTName\": \"ThirdName\"\n    },\n    \"arName\": {\n      \"arFName\": \"FirstName\",\n      \"arSName\": \"SecondName\",\n      \"arTName\": \"ThirdName\",\n      \"arLName\": \"LastName\",\n      \"arFullName\": \"Full Name\",\n      \"arTradeName\": \"Arabic Trade Name\"\n    },\n    \"engTradeName\": \"SAMCO\"\n  }\n }\n\n\n}"
+						},
+						"url": {
+							"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/customers?country=JOR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"portalserver",
+								"services",
+								"rest",
+								"v1",
+								"cas",
+								"customers"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "JOR"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e;Path=/;Expires=Tue, 26-Jan-2021 04:20:57 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "X-BBXSRF",
+							"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.17.v20160517)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": \"IS-CAS-1000\",\n        \"message\": \"Customer created successfully.\"\n    },\n    \"data\": {\n        \"uid\": {\n            \"type\": \"TPASS\",\n            \"value\": \"N939003\"\n        },\n        \"documentValidityDate\": \"2020-01-25\",\n        \"resident\": true,\n        \"name\": \"John\",\n        \"surname\": \"Doe\",\n        \"nickName\": \"eddie\",\n        \"gender\": \"MALE\",\n        \"birthDate\": \"2020-01-25\",\n        \"placeOfBirth\": \"country, city\",\n        \"address\": {\n            \"country\": \"IN\",\n            \"city\": \"CityName\",\n            \"stateProvinceRegion\": \"Region Name\",\n            \"address\": \"street, building No.\"\n        },\n        \"additionalDetailsPrivate\": {\n            \"additionalIndividualDetailsPrivate\": {\n                \"nationality\": \"BH\",\n                \"opendate\": \"2020-01-25\"\n            }\n        },\n        \"additionalDetails\": {\n            \"additionalIndividualDetails\": {\n                \"customerType\": \"Individual\",\n                \"engName\": {\n                    \"enSName\": \"SecondName\",\n                    \"enTName\": \"ThirdName\"\n                },\n                \"arName\": {\n                    \"legalArName\": {\n                        \"arFullName\": \"Full Name\",\n                        \"arTradeName\": \"Arabic Trade Name\"\n                    }\n                }\n            }\n        },\n        \"recordId\": \"123456\",\n        \"status\": \"active\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/accounts?country=JOR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					},
+					{
+						"key": "X-BBXSRF",
+						"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": {\n    \"IBAN\": \"JO42ABCJ0000000000233085564510\"\n  },\n  \"servicer\": {\n    \"bic\": \"ABCJJOA0\"\n  },\n  \"type\": \"DLFT\",\n  \"openingDate\": \"2020-01-25\",\n  \"closingDate\": \"2020-01-25\",\n  \"currency\": \"JOR\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/accounts?country=JOR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"portalserver",
+						"services",
+						"rest",
+						"v1",
+						"cas",
+						"customers",
+						"1",
+						"accounts"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "JOR"
+						}
+					]
+				},
+				"description": "Create Account\nhttp://localhost:7777/portalserver/services/rest/v1/cas/customers/{id}/accounts?country=<countrycode>"
+			},
+			"response": [
+				{
+					"name": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/accounts?country=JOR",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							},
+							{
+								"key": "X-BBXSRF",
+								"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": {\n    \"IBAN\": \"JO42ABCJ0000000000233085564510\"\n  },\n  \"servicer\": {\n    \"bic\": \"ABCJJOA0\"\n  },\n  \"type\": \"DLFT\",\n  \"openingDate\": \"2020-01-25\",\n  \"closingDate\": \"2020-01-25\",\n  \"currency\": \"JOR\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/customers/1/accounts?country=JOR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"portalserver",
+								"services",
+								"rest",
+								"v1",
+								"cas",
+								"customers",
+								"1",
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "JOR"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e;Path=/;Expires=Tue, 26-Jan-2021 04:21:02 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "X-BBXSRF",
+							"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.17.v20160517)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": \"IS-CAS-1001\",\n        \"message\": \"Account created successfully.\"\n    },\n    \"data\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7777/portalserver/services/rest/v1/cas/accounts/1/aliases?country=JOR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					},
+					{
+						"key": "X-BBXSRF",
+						"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"type\": \"MOBILENUMBER\",\n  \"value\": \"+917777777777\",\n  \"status\": \"active\",\n  \"startDate\": \"2020-01-25\",\n  \"expirationDate\": \"2020-01-25\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/accounts/1/aliases?country=JOR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"portalserver",
+						"services",
+						"rest",
+						"v1",
+						"cas",
+						"accounts",
+						"1",
+						"aliases"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "JOR"
+						}
+					]
+				},
+				"description": "Link Account To Alias\nhttp://localhost:7777/portalserver/services/rest/v1/cas/accounts/{id}/aliases?country=<countrycode>"
+			},
+			"response": [
+				{
+					"name": "http://localhost:7777/portalserver/services/rest/v1/cas/accounts/1/aliases?country=JOR",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							},
+							{
+								"key": "X-BBXSRF",
+								"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"type\": \"MOBILENUMBER\",\n  \"value\": \"+917777777777\",\n  \"status\": \"active\",\n  \"startDate\": \"2020-01-25\",\n  \"expirationDate\": \"2020-01-25\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/accounts/1/aliases?country=JOR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"portalserver",
+								"services",
+								"rest",
+								"v1",
+								"cas",
+								"accounts",
+								"1",
+								"aliases"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "JOR"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e;Path=/;Expires=Tue, 26-Jan-2021 04:21:07 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "X-BBXSRF",
+							"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.17.v20160517)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": \"IS-CAS-1003\",\n        \"message\": \"Account linked to Alias.\"\n    },\n    \"data\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7777/portalserver/services/rest/v1/cas/aliases/1?country=JOR",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					},
+					{
+						"key": "X-BBXSRF",
+						"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"type\": \"MOBILENUMBER\",\n  \"value\": \"+917777777777\",\n  \"startDate\": \"2020-05-12\",\n  \"expirationDate\": \"2025-09-09\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/aliases/1?country=JOR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"portalserver",
+						"services",
+						"rest",
+						"v1",
+						"cas",
+						"aliases",
+						"1"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "JOR"
+						}
+					]
+				},
+				"description": "Update Alias\nhttp://localhost:7777/portalserver/services/rest/v1/cas/aliases/{id}?country=<countrycode>"
+			},
+			"response": [
+				{
+					"name": "http://localhost:7777/portalserver/services/rest/v1/cas/aliases/1?country=JOR",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							},
+							{
+								"key": "X-BBXSRF",
+								"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"type\": \"MOBILENUMBER\",\n  \"value\": \"+917777777777\",\n  \"startDate\": \"2020-05-12\",\n  \"expirationDate\": \"2025-09-09\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/aliases/1?country=JOR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"portalserver",
+								"services",
+								"rest",
+								"v1",
+								"cas",
+								"aliases",
+								"1"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "JOR"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e;Path=/;Expires=Tue, 26-Jan-2021 04:21:12 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "X-BBXSRF",
+							"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.17.v20160517)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": \"IS-CAS-1009\",\n        \"message\": \"Alias updated successfully.\"\n    },\n    \"data\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7777/portalserver/services/rest/v1/cas/customers?country=JOR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					},
+					{
+						"key": "X-BBXSRF",
+						"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"uid\": {\n        \"type\": \"TPASS\",\n        \"value\": \"N939003\"\n    },\n    \"documentValidityDate\": \"2020-01-25\",\n    \"resident\": \"true\",\n    \"name\": \"John\",\n    \"surname\": \"Doe\",\n    \"nickName\": \"eddie\",\n    \"gender\": \"MALE\",\n    \"birthDate\": \"2020-01-25\",\n    \"placeOfBirth\": \"country, city\",\n    \"address\": {\n        \"country\": \"IN\",\n        \"city\": \"CityName\",\n        \"stateProvinceRegion\": \"Region Name\",\n        \"address\": \"street, building No.\"\n    },\n    \"additionalDetailsPrivate\": {\n        \"additionalIndividualDetailsPrivate\": {\n            \"nationality\": \"BH\",\n            \"opendate\": \"2020-01-25\"\n        }\n    },\n    \"additionalDetails\": {\n        \"additionalLegalDetails\": {\n            \"customerType\": \"Company\",\n            \"engName\": {\n                \"enSName\": \"SecondName\",\n                \"enTName\": \"ThirdName\"\n            },\n            \"arName\": {\n                \"arFName\": \"FirstName\",\n                \"arSName\": \"SecondName\",\n                \"arTName\": \"ThirdName\",\n                \"arLName\": \"LastName\",\n                \"arFullName\": \"Full Name\",\n                \"arTradeName\": \"Arabic Trade Name\"\n            },\n            \"engTradeName\": \"SAMCO\"\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/customers?country=JOR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"portalserver",
+						"services",
+						"rest",
+						"v1",
+						"cas",
+						"customers"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "JOR"
+						}
+					]
+				},
+				"description": "Create Customer-Individual"
+			},
+			"response": [
+				{
+					"name": "http://localhost:7777/portalserver/services/rest/v1/cas/customers?country=JOR",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=ozhtsi4neuti14jhn7gqke9x3; userLanguage=en-US; BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							},
+							{
+								"key": "X-BBXSRF",
+								"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uid\": {\n        \"type\": \"TPASS\",\n        \"value\": \"N939003\"\n    },\n    \"documentValidityDate\": \"2020-01-25\",\n    \"resident\": \"true\",\n    \"name\": \"John\",\n    \"surname\": \"Doe\",\n    \"nickName\": \"eddie\",\n    \"gender\": \"MALE\",\n    \"birthDate\": \"2020-01-25\",\n    \"placeOfBirth\": \"country, city\",\n    \"address\": {\n        \"country\": \"IN\",\n        \"city\": \"CityName\",\n        \"stateProvinceRegion\": \"Region Name\",\n        \"address\": \"street, building No.\"\n    },\n    \"additionalDetailsPrivate\": {\n        \"additionalIndividualDetailsPrivate\": {\n            \"nationality\": \"BH\",\n            \"opendate\": \"2020-01-25\"\n        }\n    },\n    \"additionalDetails\": {\n        \"additionalLegalDetails\": {\n            \"customerType\": \"Company\",\n            \"engName\": {\n                \"enSName\": \"SecondName\",\n                \"enTName\": \"ThirdName\"\n            },\n            \"arName\": {\n                \"arFName\": \"FirstName\",\n                \"arSName\": \"SecondName\",\n                \"arTName\": \"ThirdName\",\n                \"arLName\": \"LastName\",\n                \"arFullName\": \"Full Name\",\n                \"arTradeName\": \"Arabic Trade Name\"\n            },\n            \"engTradeName\": \"SAMCO\"\n        }\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:7777/portalserver/services/rest/v1/cas/customers?country=JOR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"portalserver",
+								"services",
+								"rest",
+								"v1",
+								"cas",
+								"customers"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "JOR"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BBXSRF=d3d468d1-a1fb-493c-b6d2-185cb6da158e;Path=/;Expires=Tue, 26-Jan-2021 04:21:20 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 01 Jan 1970 00:00:00 GMT"
+						},
+						{
+							"key": "X-BBXSRF",
+							"value": "d3d468d1-a1fb-493c-b6d2-185cb6da158e"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.17.v20160517)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"code\": \"IS-CAS-1000\",\n        \"message\": \"Customer created successfully.\"\n    },\n    \"data\": {\n        \"uid\": {\n            \"type\": \"TPASS\",\n            \"value\": \"N939003\"\n        },\n        \"documentValidityDate\": \"2020-01-25\",\n        \"resident\": true,\n        \"name\": \"John\",\n        \"surname\": \"Doe\",\n        \"nickName\": \"eddie\",\n        \"gender\": \"MALE\",\n        \"birthDate\": \"2020-01-25\",\n        \"placeOfBirth\": \"country, city\",\n        \"address\": {\n            \"country\": \"IN\",\n            \"city\": \"CityName\",\n            \"stateProvinceRegion\": \"Region Name\",\n            \"address\": \"street, building No.\"\n        },\n        \"additionalDetailsPrivate\": {\n            \"additionalIndividualDetailsPrivate\": {\n                \"nationality\": \"BH\",\n                \"opendate\": \"2020-01-25\"\n            }\n        },\n        \"additionalDetails\": {\n            \"additionalIndividualDetails\": {\n                \"customerType\": \"Individual\",\n                \"engName\": {\n                    \"enSName\": \"SecondName\",\n                    \"enTName\": \"ThirdName\"\n                },\n                \"arName\": {\n                    \"legalArName\": {\n                        \"arFullName\": \"Full Name\",\n                        \"arTradeName\": \"Arabic Trade Name\"\n                    }\n                }\n            }\n        },\n        \"recordId\": \"123456\",\n        \"status\": \"active\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:7777/portalserver/services/rest/v1/payments/input/request-to-pay?country=JOR",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"type": "text",
+						"value": "anonymousUserId=b3b4ddf7-d2ea-44df-924c-e346ce7ad508; JSESSIONID=f4gmjyidmk611sm56ters200f; userLanguage=en-US; BBXSRF=716e0c9e-b07d-4b97-b8dc-7a8057b8c1a8"
+					},
+					{
+						"key": "X-BBXSRF",
+						"type": "text",
+						"value": "716e0c9e-b07d-4b97-b8dc-7a8057b8c1a8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"requestIdentification\": {\n        \"endToEndId\": \"65837b100c6748399e5bs4645bfbf3588\"\n    },\n    \"transactionTypeCode\": \"11110\",\n    \"instructedAmount\": {\n        \"currency\": \"JOD\",\n        \"value\": \"1\"\n    },\n    \"debtor\": {\n        \"account\": {\n            \"IBAN\": \"JO42ABCJ0001000179950929010016\"\n        },\n        \"name\": \"مصطفى\",\n        \"address\": \"المنامه البحرين/شارع\"\n    },\n    \"debtorAgent\": {\n        \"bic\": \"ABCJJOA0\"\n    },\n    \"creditor\": {\n        \"account\": {\n            \"IBAN\": \"JO74ABCJ0001000161740929010011\"\n        },\n        \"name\": \"عثمان\",\n        \"address\": \"عمان-شفا بدران \"\n    },\n    \"creditorAgent\": {\n        \"bic\": \"ABCJJOA0\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7777/portalserver/services/rest/v1/payments/input/request-to-pay?country=JOR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"portalserver",
+						"services",
+						"rest",
+						"v1",
+						"payments",
+						"input",
+						"request-to-pay"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "JOR"
+						}
+					]
+				},
+				"description": "SendRequestToPay-Mobile Application"
+			},
+			"response": []
+		}
+	]
+}

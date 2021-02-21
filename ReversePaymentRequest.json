@@ -1,0 +1,80 @@
+{
+  "entryReference": "2018120717540001",
+  "paymentEntry": {
+    "amount": {
+      "currency": "JOR",
+      "value": 850.5
+    },
+    "debitAccount": "JO42ABCJ0000000000233085564510",
+    "creditAccount": "JO34ABCJ0000000000200014215001"
+  },
+  "chargeEntry": {
+    "amount": {
+      "currency": "JOR",
+      "value": 850.5
+    },
+    "debitAccount": "JO42ABCJ0000000000233085564510",
+    "creditAccount": "JO34ABCJ0000000000200014215001"
+  },
+  "vatEntry": {
+    "amount": {
+      "currency": "JOR",
+      "value": 850.5
+    },
+    "debitAccount": "JO42ABCJ0000000000233085564510",
+    "creditAccount": "JO34ABCJ0000000000200014215001"
+  },
+  "transactionId": "string",
+  "valueDate": "2020-01-25",
+  "errorCode": "BACL",
+  "description": "Account is closed",
+  "timestamp": "2018-12-10T12:04:02Z",
+  "paymentDetails": {
+    "paymentIdentification": {
+      "endToEndId": "PAYM0001",
+      "transactionId": "2018120717540001"
+    },
+    "creditDebitIndicator": "credit",
+    "transactionTypeCode": "11110",
+    "operationType": "CSCT",
+    "valueDate": "2020-01-25",
+    "instructedAmount": {
+      "currency": "JOR",
+      "value": 850.5
+    },
+    "debtor": {
+      "name": "John Doe",
+      "address": "1 Park Street, NewYork",
+      "isPrivate": true,
+      "casRecordId": "CwYMBA4IBw",
+      "alias": {
+        "type": "MOBILE",
+        "value": "+994515000000"
+      },
+      "account": {
+        "IBAN": "JO42ABCJ0000000000233085564510"
+      }
+    },
+    "creditor": {
+      "name": "John Doe",
+      "address": "1 Park Street, NewYork",
+      "isPrivate": true,
+      "alias": {
+        "type": "MOBILE",
+        "value": "+994515000000"
+      },
+      "account": {
+        "IBAN": "JO42ABCJ0000000000233085564510"
+      }
+    },
+    "debtorAgent": {
+      "bic": "ABCJJOA0"
+    },
+    "creditorAgent": {
+      "bic": "ABCJJOA0"
+    },
+    "regulatoryReporting": "GOODS PURCHASE",
+    "remittanceInformation": "remi info",
+    "instructionForNextAgent": "sender to receiver information"
+  }
+}
