@@ -1,0 +1,34 @@
+https://10.150.211.229:8444/api/v1/tmsx-payments/output/request-to-pay/Br1frfAmRCOAL_fF_CupqA?country=JO
+---
+
+{
+  "requestIdentification" : {
+    "endToEndId" : "TESTJOA0AXXX12100119"
+  },
+  "timestamp" : "2021-02-23T19:07:27.389",
+  "transactionTypeCode" : "11110",
+  "instructedAmount" : {
+    "currency" : "JOD",
+    "value" : "20.000"
+  },
+  "debtorAccount" : {
+    "iban" : "JO57ABCJ0001000126560901010019"
+  },
+  "debtor" : {
+    "name" : "BASSAM SABBAGH",
+    "address" : "JO,AMMAN"
+  },
+  "debtorAgent" : {
+    "bic" : "ABCJJOA0"
+  },
+  "creditorAccount" : {
+    "iban" : "JO56TEST0000000000002509181188"
+  },
+  "creditor" : {
+    "name" : "Layanah Wreikat",
+    "address" : "THIRTY,KHADEGA MOSQUE"
+  },
+  "creditorAgent" : {
+    "bic" : "TESTJOA0"
+  }
+} 
