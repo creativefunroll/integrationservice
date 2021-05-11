@@ -1,0 +1,13 @@
+Steps for Configuring GatewayAPI (Integration-Service)
+
+1. Open backbase.properties file in Production and paste the below section at the end of file
+
+bankabc.api.integration.url=https://10.150.202.154:8444/api/v1
+bankabc.api.integration.clientId=bbase
+bankabc.api.integration.authorization=api-key 240FC776-83E3-4CAA-B123-F6779D6C6C29
+bankabc.api.integration.resources.certificate.trustStore=PRBAHVSCLIQGW-prod.jks
+bankabc.api.integration.resources.certificate.keyStore=PRBAHVSCLIQGW-prod.p12
+bankabc.api.integration.resources.certificate.keyStorePassword=password
+bankabc.api.integration.bicValue=ABCJJOAM
+
+2. Restart Backbase Application Server and please ensure all the needed certificates are loaded after restart. 
